@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://ctk5miam18k6l"]
+
+[ext_resource type="Script" uid="uid://lthu5bjo1u6s" path="res://scenes/control_overview_round_2/margin_container.gd" id="1_qyaew"]
+[ext_resource type="LabelSettings" uid="uid://br33vnfar1uca" path="res://shared/main_menu_label.tres" id="2_vce1a"]
+[ext_resource type="LabelSettings" uid="uid://dhqfy6pohtndf" path="res://shared/player_label_settings.tres" id="3_4qsh8"]
+[ext_resource type="Script" uid="uid://b3psls34r65n8" path="res://scenes/control_overview_round_2/grid_container.gd" id="4_k4pdo"]
+[ext_resource type="StyleBox" uid="uid://bvqptd3tfk13j" path="res://shared/new_style_box_flat.tres" id="5_51s6d"]
+[ext_resource type="Script" uid="uid://cr7m2ygyv1d64" path="res://scenes/control_overview_round_2/panel.gd" id="6_t03s0"]
+[ext_resource type="Script" uid="uid://cjasbxyggdb35" path="res://scenes/control_overview_round_2/v_box_container.gd" id="7_tek2h"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=667254874]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1526756598]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+script = ExtResource("1_qyaew")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1057725915]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1165609068]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Controls"
+label_settings = ExtResource("2_vce1a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainerTitles" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1462417058]
+layout_mode = 2
+theme_override_constants/separation = 490
+alignment = 1
+
+[node name="LabelPlayer2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerTitles" unique_id=1759291152]
+layout_mode = 2
+text = "Seeker"
+label_settings = ExtResource("3_4qsh8")
+
+[node name="LabelPlayer1" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerTitles" unique_id=1801211537]
+layout_mode = 2
+text = "Thief"
+label_settings = ExtResource("3_4qsh8")
+
+[node name="HBoxContainerControls" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=235013678]
+layout_mode = 2
+theme_override_constants/separation = 260
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls" unique_id=2002887078]
+custom_minimum_size = Vector2(550, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("5_51s6d")
+
+[node name="Panel" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/PanelContainer" unique_id=538452560]
+custom_minimum_size = Vector2(350, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("6_t03s0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/PanelContainer/Panel" unique_id=1865400582]
+layout_mode = 2
+script = ExtResource("7_tek2h")
+
+[node name="LMB" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/PanelContainer/Panel/VBoxContainer" unique_id=387585348]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/PanelContainer/Panel/VBoxContainer" unique_id=671977638]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+text = "Left
+Mouse
+Button"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls" unique_id=15637374]
+custom_minimum_size = Vector2(550, 500)
+layout_mode = 2
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 25
+columns = 3
+script = ExtResource("4_k4pdo")
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=2041450593]
+layout_mode = 2
+
+[node name="Up" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=1582006810]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer/Up" unique_id=1979789349]
+layout_mode = 2
+text = "↑"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=1561798770]
+layout_mode = 2
+
+[node name="Left" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=606526401]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer/Left" unique_id=1849903169]
+layout_mode = 2
+text = "←"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Down" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=636398581]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer/Down" unique_id=743702125]
+layout_mode = 2
+text = "↓"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Right" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=700521083]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer/Right" unique_id=1055924695]
+layout_mode = 2
+text = "→"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainerMenu" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1954186076]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerMenu" unique_id=1082380512]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Begin heist!"
+
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerMenu" unique_id=632219561]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Back"
