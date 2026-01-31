@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://0asxuq41ow4h"]
+
+[ext_resource type="Script" uid="uid://btidqgoh41y1n" path="res://scripts/score_bar.gd" id="1_cdh2m"]
+
+[node name="ScoreBar" type="Node2D" unique_id=738787395]
+script = ExtResource("1_cdh2m")
+score_0 = 1112
+score_1 = 1125
+time_phase_2 = 2.0
+
+[node name="Player1Bar" type="ProgressBar" parent="." unique_id=765712733]
+offset_left = 178.0
+offset_top = 119.0
+offset_right = 182.0
+offset_bottom = 146.0
+
+[node name="Label" type="Label" parent="Player1Bar" unique_id=1182607492]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 24.0
+offset_right = 37.0
+offset_bottom = 47.0
+
+[node name="Player2Bar" type="ProgressBar" parent="." unique_id=1495097295]
+offset_left = 178.0
+offset_top = 52.0
+offset_right = 182.0
+offset_bottom = 79.0
+
+[node name="Label" type="Label" parent="Player2Bar" unique_id=2017272716]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 24.0
+offset_right = 37.0
+offset_bottom = 47.0
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1145049430]
+sub_emitter = NodePath(".")
