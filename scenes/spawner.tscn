@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d17ncw2rb7hk3"]
+
+[ext_resource type="Script" uid="uid://07tp4rd2dd1v" path="res://scripts/spawner.gd" id="1_2vbf6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ik2nu"]
+
+[node name="Spawner" type="Node2D" unique_id=1610160643]
+script = ExtResource("1_2vbf6")
+
+[node name="EnemySpawner" type="Node2D" parent="." unique_id=247262376]
+
+[node name="Marker2D" type="Marker2D" parent="EnemySpawner" unique_id=2087400134]
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="EnemySpawner/Marker2D" unique_id=678650220]
+unique_name_in_owner = true
+shape = SubResource("CircleShape2D_ik2nu")

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://b7fhtexecjr7h"]
+
+[ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="1_x41mq"]
+[ext_resource type="PackedScene" uid="uid://c30c6v3tnaph1" path="res://scenes/player.tscn" id="2_yjbt2"]
+[ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="3_udrg6"]
+[ext_resource type="PackedScene" uid="uid://d17ncw2rb7hk3" path="res://scenes/spawner.tscn" id="4_r5643"]
+
+[node name="Main" type="Node2D" unique_id=63234984]
+
+[node name="CrowdManager" parent="." unique_id=61583125 instance=ExtResource("1_x41mq")]
+
+[node name="Player" parent="." unique_id=1129632678 instance=ExtResource("2_yjbt2")]
+position = Vector2(7, 3)
+
+[node name="Cursor" parent="." unique_id=105940319 instance=ExtResource("3_udrg6")]
+
+[node name="Spawner" parent="." unique_id=1610160643 node_paths=PackedStringArray("spawn_poly") instance=ExtResource("4_r5643")]
+spawn_count = 42
+spawn_poly = NodePath("../Polygon2D")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=803088480]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1918175272]
+position = Vector2(198, 192.00002)
+scale = Vector2(0.394437, 0.33203956)
+polygon = PackedVector2Array(15, 17, 301, 484, 761, 419, 533, 140, 218, 225)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1478357859]
+polygon = PackedVector2Array(-3, 1083, 1932, 1085, 2111, 1270, -154, 1255)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=421853899]
+polygon = PackedVector2Array(-2, 1099, -2, -22, -189, -203, -146, 1270)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1875275080]
+polygon = PackedVector2Array(1945, 5, -15, -2, -220, -232, 2134, -225)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2020377308]
+polygon = PackedVector2Array(2111, 1284, 1918, 1087, 1920, -53, 2156, -248)
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=2090420400]
+color = Color(1, 0, 1, 0.09411765)
+invert_border = 0.1
+polygon = PackedVector2Array(51, 77, 32, 1054, 760, 1046, 758, 518, 1216, 516, 1205, 1023, 1883, 1025, 1885, 44)
