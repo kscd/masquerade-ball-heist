@@ -45,7 +45,6 @@ func _on_cursor_mouse_event(hit):
 		else:
 			GameEvents.lives_changed.emit(current_lives)
 		
-		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
