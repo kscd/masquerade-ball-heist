@@ -1,16 +1,11 @@
 extends Node2D
 
-signal object_clicked(object_node)
-
-func _ready():
-	object_clicked.connect(Gamesstate._on_cursor_mouse_event)
-
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			var hit = get_object_under_mouse()
 			if hit:
-				object_clicked.emit(hit)
+				GameEvents.object_clicked.emit(hit)
 				print("Clicked on: ", hit.name)
 
 func get_object_under_mouse():

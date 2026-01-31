@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cni6u1uipxgpi"]
+
+[ext_resource type="Script" uid="uid://dlkqcur77p5qi" path="res://scripts/crowd_agent.gd" id="1_ptrki"]
+[ext_resource type="Texture2D" uid="uid://bnoeahg7mcapv" path="res://icon.svg" id="2_w8vvl"]
+[ext_resource type="Script" uid="uid://de72u0s3082bh" path="res://scripts/movement.gd" id="2_xis0x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8vvl"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=737167328]
+script = ExtResource("1_ptrki")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1329937936]
+texture = ExtResource("2_w8vvl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=445793727]
+shape = SubResource("RectangleShape2D_w8vvl")
+
+[node name="MovementController" type="Node" parent="." unique_id=1560737005]
+unique_name_in_owner = true
+script = ExtResource("2_xis0x")

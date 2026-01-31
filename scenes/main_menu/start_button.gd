@@ -1,4 +1,4 @@
 extends Button
 
 func _on_pressed():
-	pass
+	Gamestate.switch_to_level()

@@ -7,8 +7,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
 size = Vector2(126, 126)
 
-[node name="Player" type="CharacterBody2D" unique_id=637585576 groups=["Player"]]
-script = ExtResource("1_g2els")
+[node name="Player" type="CharacterBody2D" unique_id=637585576 groups=["player"]]
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1395806930]
 shape = SubResource("RectangleShape2D_dqkch")
@@ -18,3 +18,7 @@ texture = ExtResource("2_qhqgy")
 
 [node name="InputHandler" type="Node" parent="." unique_id=1696016644]
 script = ExtResource("3_qhqgy")
+
+[node name="Movement" type="Node" parent="." unique_id=1606337752]
+unique_name_in_owner = true
+script = ExtResource("1_g2els")

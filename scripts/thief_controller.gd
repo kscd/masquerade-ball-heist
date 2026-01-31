@@ -6,4 +6,4 @@ func get_input_direction() -> Vector2:
 	return Input.get_vector("left", "right", "up", "down")
 	
 func _process(_delta: float) -> void:
-	movement.input_direction = get_input_direction()
+	%Movement.input_direction = get_input_direction()

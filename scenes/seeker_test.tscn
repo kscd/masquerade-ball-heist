@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://brlp4h2vd5rjh"]
 
-[ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/hunter.tscn" id="1_cqfk7"]
+[ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="1_cqfk7"]
 [ext_resource type="PackedScene" uid="uid://c30c6v3tnaph1" path="res://scenes/player.tscn" id="2_jbkkj"]
 
 [node name="HunterTest" type="Node2D" unique_id=202520878]
