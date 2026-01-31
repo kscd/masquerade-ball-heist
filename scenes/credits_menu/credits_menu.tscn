@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://d4cj8ut00iuwg"]
+
+[ext_resource type="Script" uid="uid://cvcq1uxxfig0b" path="res://scenes/control_overview/margin_container.gd" id="1_5ww45"]
+[ext_resource type="LabelSettings" uid="uid://br33vnfar1uca" path="res://shared/main_menu_label.tres" id="2_16lph"]
+[ext_resource type="Script" uid="uid://bnd6mvoamtro" path="res://scenes/credits_menu/back_button.gd" id="3_8tm0t"]
+[ext_resource type="LabelSettings" uid="uid://d2vdsnjdklwpn" path="res://shared/credits_menu_label.tres" id="3_16lph"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1154195572]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1213643643]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+script = ExtResource("1_5ww45")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1444653736]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=213750590]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Credits"
+label_settings = ExtResource("2_16lph")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=414911931]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1792920014]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Jonathan Fricke"
+label_settings = ExtResource("3_16lph")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1587601262]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Samuel Effler"
+label_settings = ExtResource("3_16lph")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1648101136]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Patrick Tamunjoh"
+label_settings = ExtResource("3_16lph")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=2039487285]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Marvin Voelcker"
+label_settings = ExtResource("3_16lph")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1090663606]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Kevin S.C. Decker"
+label_settings = ExtResource("3_16lph")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2009082981]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Back"
+script = ExtResource("3_8tm0t")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BackButton" to="MarginContainer/VBoxContainer/BackButton" method="_on_pressed"]
