@@ -1,18 +1,20 @@
 [gd_scene format=3 uid="uid://c30c6v3tnaph1"]
 
-[ext_resource type="Script" uid="uid://p3wkkm523vyh" path="res://scripts/thief-input.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://de72u0s3082bh" path="res://scripts/movement.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://bnoeahg7mcapv" path="res://icon.svg" id="2_qhqgy"]
+[ext_resource type="Script" uid="uid://p3wkkm523vyh" path="res://scripts/thief_controller.gd" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
 size = Vector2(126, 126)
 
-[node name="Player" type="Node2D" unique_id=1129632678]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=637585576]
+[node name="Player" type="CharacterBody2D" unique_id=637585576]
 script = ExtResource("1_g2els")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1395806930]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1395806930]
 shape = SubResource("RectangleShape2D_dqkch")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=2091825122]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2091825122]
 texture = ExtResource("2_qhqgy")
+
+[node name="InputHandler" type="Node" parent="." unique_id=1696016644]
+script = ExtResource("3_qhqgy")
