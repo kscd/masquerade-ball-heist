@@ -9,6 +9,8 @@ func _ready():
 # 	print("Handle click in state")
 
 func _on_cursor_mouse_event(hit):
+	if hit.is_in_group("player"):
+		print("Hit player")
 	print("HIT 📍 ", hit)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
