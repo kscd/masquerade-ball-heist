@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://b7fhtexecjr7h"]
+[gd_scene format=3 uid="uid://bwphdfw0acdb2"]
 
 [ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="1_x41mq"]
 [ext_resource type="PackedScene" uid="uid://c30c6v3tnaph1" path="res://scenes/player.tscn" id="2_yjbt2"]
 [ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="3_udrg6"]
-[ext_resource type="PackedScene" uid="uid://d17ncw2rb7hk3" path="res://scenes/spawner.tscn" id="4_r5643"]
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_r5643"]
 
 [node name="Main" type="Node2D" unique_id=63234984]
 
@@ -21,6 +21,7 @@ spawn_poly = NodePath("../Polygon2D")
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=803088480]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1918175272]
+visible = false
 position = Vector2(198, 192.00002)
 scale = Vector2(0.394437, 0.33203956)
 polygon = PackedVector2Array(15, 17, 301, 484, 761, 419, 533, 140, 218, 225)

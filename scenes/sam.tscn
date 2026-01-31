@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://bxlyvl12pgcvr" path="res://scenes/obstacle/obstacle.tscn" id="3_3qupv"]
 [ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="4_hu0ac"]
 [ext_resource type="PackedScene" uid="uid://0dt8el4fbxxp" path="res://scenes/hud.tscn" id="5_3x846"]
+[ext_resource type="Texture2D" uid="uid://sc52d2ue8ugc" path="res://sprites/mansion-reference.png" id="6_cdoi4"]
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="7_sm15i"]
+[ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="8_j82p7"]
 
 [node name="Sam" type="Node2D" unique_id=2027881017]
 
@@ -15,8 +18,47 @@ position = Vector2(750, 433)
 position = Vector2(468, 435)
 
 [node name="Obstacle" parent="." unique_id=1070146420 instance=ExtResource("3_3qupv")]
-position = Vector2(951, 442)
+position = Vector2(1241, 410)
 
 [node name="Seeker" parent="." unique_id=1225841198 instance=ExtResource("4_hu0ac")]
 
 [node name="HUD" parent="." unique_id=925397185 instance=ExtResource("5_3x846")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1683676282]
+position = Vector2(959.5, 542.5)
+scale = Vector2(0.46850586, 0.47092015)
+texture = ExtResource("6_cdoi4")
+
+[node name="Spawner" parent="." unique_id=1610160643 node_paths=PackedStringArray("spawn_poly") instance=ExtResource("7_sm15i")]
+spawn_count = 55
+spawn_poly = NodePath("../Polygon2D")
+
+[node name="CrowdManager" parent="." unique_id=61583125 instance=ExtResource("8_j82p7")]
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1558515404]
+color = Color(1, 0, 1, 0.09411765)
+invert_border = 0.1
+polygon = PackedVector2Array(51, 77, 32, 1054, 760, 1046, 758, 518, 1216, 516, 1205, 1023, 1883, 1025, 1885, 44)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=92579591]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1882635119]
+visible = false
+position = Vector2(198, 192.00002)
+scale = Vector2(0.394437, 0.33203956)
+polygon = PackedVector2Array(15, 17, 301, 484, 761, 419, 533, 140, 218, 225)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1698742592]
+polygon = PackedVector2Array(-3, 1083, 1932, 1085, 2111, 1270, -154, 1255)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1827288317]
+polygon = PackedVector2Array(-2, 1099, -2, -22, -189, -203, -146, 1270)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=556958734]
+polygon = PackedVector2Array(1945, 5, -15, -2, -220, -232, 2134, -225)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1473265122]
+polygon = PackedVector2Array(2111, 1284, 1918, 1087, 1920, -53, 2156, -248)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=997325234]
+polygon = PackedVector2Array(770, 1163, 760, 514, 1197, 524, 1199, 1204)

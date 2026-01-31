@@ -1,6 +1,6 @@
 extends Node
 
-@export var max_speed = 300.0
+@export var max_speed = 150.0
 @export var acceleration = 1500.0
 @export var friction = 1200.0
 
@@ -40,10 +40,16 @@ func start_hop():
 	hop_tween = create_tween().set_loops()
 	
 	hop_tween.tween_property(sprite, "position:y", -10, 0.15).set_trans(Tween.TRANS_SINE)
-	hop_tween.parallel().tween_property(sprite, "rotation_degrees", 8, 0.15)
+	hop_tween.parallel().tween_property(sprite, "rotation_degrees", 2, 0.15)
 	
 	hop_tween.tween_property(sprite, "position:y", 0, 0.15).set_trans(Tween.TRANS_SINE)
-	hop_tween.parallel().tween_property(sprite, "rotation_degrees", -8, 0.15)
+	hop_tween.parallel().tween_property(sprite, "rotation_degrees", -2, 0.15)
+	
+	hop_tween.tween_property(sprite, "position:y", -10, 0.15).set_trans(Tween.TRANS_SINE)
+	hop_tween.parallel().tween_property(sprite, "rotation_degrees", -2, 0.15)
+	
+	hop_tween.tween_property(sprite, "position:y", 0, 0.15).set_trans(Tween.TRANS_SINE)
+	hop_tween.parallel().tween_property(sprite, "rotation_degrees", 2, 0.15)
 
 func stop_hop():
 	if not is_hopping: return
