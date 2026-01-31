@@ -4,15 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://ct4fd1jjxl74w" path="res://sprites/character-reference.png" id="1_qhqgy"]
 [ext_resource type="Script" uid="uid://p3wkkm523vyh" path="res://scripts/thief_controller.gd" id="3_qhqgy"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
-radius = 5.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
+height = 72.0
 
 [node name="Player" type="CharacterBody2D" unique_id=637585576 groups=["player"]]
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1395806930]
-position = Vector2(0, 15)
-shape = SubResource("CircleShape2D_qhqgy")
+shape = SubResource("CapsuleShape2D_qhqgy")
+debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2091825122]
 scale = Vector2(0.71875, 0.71875)
