@@ -37,6 +37,9 @@ polygon = PackedVector2Array(1945, 5, -15, -2, -220, -232, 2134, -225)
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2020377308]
 polygon = PackedVector2Array(2111, 1284, 1918, 1087, 1920, -53, 2156, -248)
 
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1921751558]
+polygon = PackedVector2Array(770, 1163, 760, 514, 1197, 524, 1199, 1204)
+
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=2090420400]
 color = Color(1, 0, 1, 0.09411765)
 invert_border = 0.1
