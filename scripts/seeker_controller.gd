@@ -3,7 +3,7 @@ extends Node2D
 signal object_clicked(object_node)
 
 func _ready():
-	object_clicked.connect(Gamesstate._on_cursor_mouse_event)
+	object_clicked.connect(Gamestate._on_cursor_mouse_event)
 
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:

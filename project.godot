@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Gamesstate="*uid://bd0w0dxn3nd5s"
+Gamestate="*uid://bd0w0dxn3nd5s"
 
 [display]
 
