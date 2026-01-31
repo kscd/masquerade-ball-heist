@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://0dt8el4fbxxp"]
+
+[ext_resource type="Script" uid="uid://dvkm2gl71qlf4" path="res://scripts/hud.gd" id="1_ahhtf"]
+[ext_resource type="Texture2D" uid="uid://bnoeahg7mcapv" path="res://icon.svg" id="2_oo0fn"]
+
+[node name="HUD" type="CanvasLayer" unique_id=925397185]
+script = ExtResource("1_ahhtf")
+heart_texture = ExtResource("2_oo0fn")
+
+[node name="LivesContainer" type="Control" parent="." unique_id=388608115]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchor_left = 0.31800002
+anchor_top = 0.42800003
+anchor_right = 0.68200004
+anchor_bottom = 0.572
+offset_left = 0.4399414
+offset_top = -0.24002075
+offset_right = -0.44006348
+offset_bottom = 0.23999023
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LivesContainer" unique_id=1308126630]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="LivesContainer/HBoxContainer" unique_id=1285040045]
+layout_mode = 2
+texture = ExtResource("2_oo0fn")

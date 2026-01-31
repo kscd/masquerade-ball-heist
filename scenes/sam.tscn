@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://c30c6v3tnaph1" path="res://scenes/player.tscn" id="1_tjjfe"]
 [ext_resource type="PackedScene" uid="uid://bhtx7d8nan6qt" path="res://scenes/collectible/collectible_sample.tscn" id="2_tjjfe"]
 [ext_resource type="PackedScene" uid="uid://bxlyvl12pgcvr" path="res://scenes/obstacle/obstacle.tscn" id="3_3qupv"]
+[ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="4_hu0ac"]
+[ext_resource type="PackedScene" uid="uid://0dt8el4fbxxp" path="res://scenes/hud.tscn" id="5_3x846"]
 
 [node name="Sam" type="Node2D" unique_id=2027881017]
 
@@ -14,3 +16,7 @@ position = Vector2(468, 435)
 
 [node name="Obstacle" parent="." unique_id=1070146420 instance=ExtResource("3_3qupv")]
 position = Vector2(951, 442)
+
+[node name="Seeker" parent="." unique_id=1225841198 instance=ExtResource("4_hu0ac")]
+
+[node name="HUD" parent="." unique_id=925397185 instance=ExtResource("5_3x846")]
