@@ -79,3 +79,54 @@ func get_pressed_style(scale: float) -> StyleBoxFlat:
 	style.shadow_offset = Vector2(0, 4)
 	
 	return style
+
+func get_mouse_style() -> StyleBoxFlat:
+	var style = StyleBoxFlat.new()
+
+	style.bg_color = "#800000"
+	style.border_color = gold_normal
+
+	# Set border widths
+	style.border_width_bottom = border_width
+	style.border_width_top = border_width
+	style.border_width_right = border_width
+	style.border_width_left = border_width
+
+	# Set corner radius
+	style.corner_radius_bottom_left = border_width
+	style.corner_radius_bottom_right = border_width
+	style.corner_radius_top_left = border_width
+	style.corner_radius_top_right = border_width
+
+	style.expand_margin_left = -15
+	style.expand_margin_top = -15
+
+	return style
+	
+func get_pressed_mouse_style() -> StyleBoxFlat:
+	var style = StyleBoxFlat.new()
+	
+	style.bg_color = black_cherry
+	style.border_color = gold_muted
+	
+	# Set border widths
+	style.border_width_bottom = border_width
+	style.border_width_top = border_width
+	style.border_width_right = border_width
+	style.border_width_left = border_width
+	
+	# Set corner radius
+	style.corner_radius_bottom_left = border_width
+	style.corner_radius_bottom_right = border_width
+	style.corner_radius_top_left = border_width
+	style.corner_radius_top_right = border_width
+	
+	style.content_margin_top = 15
+	style.shadow_size = 8
+	style.shadow_color = Color(0, 0, 0, 0.6)
+	style.shadow_offset = Vector2(0, 4)
+
+	style.expand_margin_left = -15
+	style.expand_margin_top = -15
+
+	return style

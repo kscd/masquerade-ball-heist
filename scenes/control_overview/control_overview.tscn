@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://bswfnkxv33unh"]
+
+[ext_resource type="LabelSettings" uid="uid://br33vnfar1uca" path="res://shared/main_menu_label.tres" id="1_23vv7"]
+[ext_resource type="Script" uid="uid://cvcq1uxxfig0b" path="res://scenes/control_overview/margin_container.gd" id="1_xokas"]
+[ext_resource type="Script" uid="uid://bb3mvk51yp8ep" path="res://scenes/control_overview/start_button.gd" id="2_23vv7"]
+[ext_resource type="Script" uid="uid://bldtdecrmw3yy" path="res://scenes/control_overview/back_button.gd" id="2_a82xa"]
+[ext_resource type="LabelSettings" uid="uid://dhqfy6pohtndf" path="res://shared/player_label_settings.tres" id="3_0dh5g"]
+[ext_resource type="Script" uid="uid://ch0ovpqfh60ml" path="res://scenes/control_overview/grid_container.gd" id="3_ta5ja"]
+[ext_resource type="Script" uid="uid://dtklo720l66ne" path="res://scenes/control_overview/panel.gd" id="4_ltf20"]
+[ext_resource type="Script" uid="uid://6shbpqf6l7cy" path="res://scenes/control_overview/v_box_container.gd" id="5_0dh5g"]
+[ext_resource type="StyleBox" uid="uid://bvqptd3tfk13j" path="res://shared/new_style_box_flat.tres" id="5_dge5s"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=667254874]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1526756598]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+script = ExtResource("1_xokas")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1057725915]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1165609068]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Controls"
+label_settings = ExtResource("1_23vv7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainerTitles" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1462417058]
+layout_mode = 2
+theme_override_constants/separation = 490
+alignment = 1
+
+[node name="LabelPlayer1" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerTitles" unique_id=1801211537]
+layout_mode = 2
+text = "Thief"
+label_settings = ExtResource("3_0dh5g")
+
+[node name="LabelPlayer2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerTitles" unique_id=1759291152]
+layout_mode = 2
+text = "Seeker"
+label_settings = ExtResource("3_0dh5g")
+
+[node name="HBoxContainerControls" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=235013678]
+layout_mode = 2
+theme_override_constants/separation = 260
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls" unique_id=15637374]
+custom_minimum_size = Vector2(550, 500)
+layout_mode = 2
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 25
+columns = 3
+script = ExtResource("3_ta5ja")
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=2041450593]
+layout_mode = 2
+
+[node name="W" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=1582006810]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer/W" unique_id=1979789349]
+layout_mode = 2
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=1561798770]
+layout_mode = 2
+
+[node name="A" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=606526401]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer/A" unique_id=1849903169]
+layout_mode = 2
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="S" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=636398581]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer/S" unique_id=743702125]
+layout_mode = 2
+text = "S"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="D" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=700521083]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer/D" unique_id=1055924695]
+layout_mode = 2
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls" unique_id=2002887078]
+custom_minimum_size = Vector2(550, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("5_dge5s")
+
+[node name="Panel" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/PanelContainer" unique_id=538452560]
+custom_minimum_size = Vector2(350, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("4_ltf20")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/PanelContainer/Panel" unique_id=1865400582]
+layout_mode = 2
+script = ExtResource("5_0dh5g")
+
+[node name="LMB" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/PanelContainer/Panel/VBoxContainer" unique_id=387585348]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/PanelContainer/Panel/VBoxContainer" unique_id=671977638]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+text = "Left
+Mouse
+Button"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="HBoxContainerMenu" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1954186076]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerMenu" unique_id=1082380512]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Begin heist!"
+script = ExtResource("2_23vv7")
+
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerMenu" unique_id=632219561]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Back"
+script = ExtResource("2_a82xa")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerMenu/StartButton" to="MarginContainer/VBoxContainer/HBoxContainerMenu/StartButton" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerMenu/BackButton" to="MarginContainer/VBoxContainer/HBoxContainerMenu/BackButton" method="_on_pressed"]
