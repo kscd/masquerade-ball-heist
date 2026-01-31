@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cni6u1uipxgpi"]
 
-[ext_resource type="Script" path="res://scripts/crowd_agent.gd" id="1_ptrki"]
-[ext_resource type="Texture2D" uid="uid://ct4fd1jjxl74w" path="res://sprites/character-reference.png" id="2_qt0yl"]
+[ext_resource type="Script" uid="uid://dlkqcur77p5qi" path="res://scripts/crowd_agent.gd" id="1_ptrki"]
 [ext_resource type="Script" uid="uid://de72u0s3082bh" path="res://scripts/movement.gd" id="2_xis0x"]
+[ext_resource type="PackedScene" uid="uid://bdrfq6cj47gsp" path="res://scenes/character.tscn" id="3_xis0x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xis0x"]
 radius = 14.0
@@ -19,6 +19,4 @@ script = ExtResource("2_xis0x")
 unique_name_in_owner = true
 shape = SubResource("CapsuleShape2D_xis0x")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=415238267]
-scale = Vector2(0.71875, 0.71875)
-texture = ExtResource("2_qt0yl")
+[node name="Character" parent="." unique_id=474885732 instance=ExtResource("3_xis0x")]

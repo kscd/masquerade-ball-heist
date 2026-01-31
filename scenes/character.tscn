@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bdrfq6cj47gsp"]
+
+[ext_resource type="Script" uid="uid://dg0emo8e5itus" path="res://scripts/character.gd" id="1_agfs1"]
+[ext_resource type="Texture2D" uid="uid://ugwtrw0tqrs5" path="res://sprites/character/head/head-01.png" id="2_bj47h"]
+[ext_resource type="Texture2D" uid="uid://fbym44ylm002" path="res://sprites/character/head/head-02.png" id="3_4lh0q"]
+[ext_resource type="Texture2D" uid="uid://b5qqprkj28b28" path="res://sprites/character/head/head-03.png" id="4_7qyni"]
+[ext_resource type="Texture2D" uid="uid://dgnm7rotuoq38" path="res://sprites/character/head/head-04.png" id="5_sougf"]
+[ext_resource type="Texture2D" uid="uid://d13i0b6alp7f8" path="res://sprites/character/head/head-05.png" id="6_p478o"]
+[ext_resource type="Texture2D" uid="uid://bfdthhtmqwdxo" path="res://sprites/character/head/head-06.png" id="7_2y1m1"]
+[ext_resource type="Texture2D" uid="uid://cvgqew2aq063j" path="res://sprites/character/head/head-07.png" id="8_41u22"]
+[ext_resource type="Texture2D" uid="uid://gad238qxfw66" path="res://sprites/character/head/head-08.png" id="9_8vsun"]
+[ext_resource type="Texture2D" uid="uid://cr31j1yv6m4c4" path="res://sprites/character/head/head-09.png" id="10_8rpqn"]
+[ext_resource type="Texture2D" uid="uid://ctv3ribdcf2er" path="res://sprites/character/head/head-10.png" id="11_i0gp7"]
+[ext_resource type="Texture2D" uid="uid://clcddi3eqna3f" path="res://sprites/character/body/torso-01.png" id="12_imt6f"]
+[ext_resource type="Texture2D" uid="uid://b7vdwft8bqmjt" path="res://sprites/character/body/torso-02.png" id="13_ofy33"]
+[ext_resource type="Texture2D" uid="uid://cp4td4t06np5l" path="res://sprites/character/body/torso-03.png" id="14_3et6r"]
+[ext_resource type="Texture2D" uid="uid://jde18xvsc6jb" path="res://sprites/character/body/torso-04.png" id="15_so3kc"]
+[ext_resource type="Texture2D" uid="uid://ft2cdgdum8v3" path="res://sprites/character/legs/legs-01.png" id="16_ohau6"]
+[ext_resource type="Texture2D" uid="uid://2scecyamvq0g" path="res://sprites/character/legs/legs-02.png" id="17_tc861"]
+[ext_resource type="Texture2D" uid="uid://dllefdyteq0sl" path="res://sprites/character/legs/legs-03.png" id="18_bgres"]
+[ext_resource type="Texture2D" uid="uid://nv4rh55uhweo" path="res://sprites/character/legs/legs-04.png" id="19_f4rt1"]
+[ext_resource type="Texture2D" uid="uid://bbxaqs7740xtk" path="res://sprites/character/legs/legs-05.png" id="20_134u4"]
+[ext_resource type="Texture2D" uid="uid://ctg3jsqsm8fuj" path="res://sprites/character/legs/legs-06.png" id="21_1yaq5"]
+[ext_resource type="Texture2D" uid="uid://bmmty4dsfwyt7" path="res://sprites/character/legs/legs-07.png" id="22_jhupd"]
+
+[node name="Character" type="Node2D" unique_id=474885732]
+script = ExtResource("1_agfs1")
+head_options = Array[Texture2D]([ExtResource("2_bj47h"), ExtResource("3_4lh0q"), ExtResource("4_7qyni"), ExtResource("5_sougf"), ExtResource("6_p478o"), ExtResource("7_2y1m1"), ExtResource("8_41u22"), ExtResource("9_8vsun"), ExtResource("10_8rpqn"), ExtResource("11_i0gp7")])
+body_options = Array[Texture2D]([ExtResource("12_imt6f"), ExtResource("13_ofy33"), ExtResource("14_3et6r"), ExtResource("15_so3kc")])
+legs_options = Array[Texture2D]([ExtResource("16_ohau6"), ExtResource("17_tc861"), ExtResource("18_bgres"), ExtResource("19_f4rt1"), ExtResource("20_134u4"), ExtResource("21_1yaq5"), ExtResource("22_jhupd")])
+
+[node name="Head" type="Sprite2D" parent="." unique_id=2019774530]
+position = Vector2(-10, -94)
+texture = ExtResource("7_2y1m1")
+offset = Vector2(10, 57)
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1648783660]
+z_index = -1
+position = Vector2(-10, -94)
+texture = ExtResource("14_3et6r")
+offset = Vector2(10, 57)
+
+[node name="Legs" type="Sprite2D" parent="." unique_id=2128625726]
+z_index = -2
+position = Vector2(-10, -94)
+texture = ExtResource("21_1yaq5")
+offset = Vector2(10, 57)

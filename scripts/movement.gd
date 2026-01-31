@@ -5,7 +5,7 @@ extends Node
 @export var friction = 1200.0
 
 @onready var body: CharacterBody2D = get_parent()
-@onready var sprite: Sprite2D = get_parent().get_node("Sprite2D")
+@onready var sprite: Node2D = get_parent().get_node("Character")
 
 var input_direction = Vector2.ZERO
 var push_direction = Vector2.ZERO

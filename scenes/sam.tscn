@@ -25,22 +25,26 @@ position = Vector2(1241, 410)
 [node name="HUD" parent="." unique_id=925397185 instance=ExtResource("5_3x846")]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1683676282]
-position = Vector2(959.5, 542.5)
-scale = Vector2(0.46850586, 0.47092015)
+position = Vector2(879, -837)
 texture = ExtResource("6_cdoi4")
+offset = Vector2(1169, 1989)
 
 [node name="Spawner" parent="." unique_id=1610160643 node_paths=PackedStringArray("spawn_poly") instance=ExtResource("7_sm15i")]
-spawn_count = 55
+spawn_count = 200
 spawn_poly = NodePath("../Polygon2D")
 
 [node name="CrowdManager" parent="." unique_id=61583125 instance=ExtResource("8_j82p7")]
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=1558515404]
+position = Vector2(2473.0002, -1204)
+scale = Vector2(2.12, 2.12)
 color = Color(1, 0, 1, 0.09411765)
+offset = Vector2(-1166.5098, 567.9246)
 invert_border = 0.1
 polygon = PackedVector2Array(51, 77, 32, 1054, 760, 1046, 758, 518, 1216, 516, 1205, 1023, 1883, 1025, 1885, 44)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=92579591]
+scale = Vector2(2.13, 2.13)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1882635119]
 visible = false

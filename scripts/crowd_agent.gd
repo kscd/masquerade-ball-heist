@@ -13,8 +13,8 @@ class_name CrowdAgent
 @export var repick_interval: float = 3.0     # seconds, staggered
 @export var reach_dist: float = 16.0         # px
 
-@export var neighbor_radius: float = 28.0    # px (personal space)
-@export var neighbor_weight: float = 1.2
+@export var neighbor_radius: float = 100    # px (personal space)
+@export var neighbor_weight: float = 5
 @export var forward_avoid_dist: float = 48.0 # px
 @export var avoid_weight: float = 2.0
 
@@ -226,7 +226,7 @@ func _apply_neighbor_avoidance(desired_dir: Vector2) -> Vector2:
 		var in_front := _heading.dot((np - p).normalized()) # 1 = ahead
 		var front_factor := clampf((in_front + 0.2) / 1.2, 0.0, 1.0)
 
-		var strength := (neighbor_radius - d) / neighbor_radius
+		var strength := (neighbor_radius - d) / d
 		push += away * strength * front_factor
 
 	if push.length_squared() > 0.0001:

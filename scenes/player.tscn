@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c30c6v3tnaph1"]
 
 [ext_resource type="Script" uid="uid://de72u0s3082bh" path="res://scripts/movement.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://ct4fd1jjxl74w" path="res://sprites/character-reference.png" id="1_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://bdrfq6cj47gsp" path="res://scenes/character.tscn" id="3_dqkch"]
 [ext_resource type="Script" uid="uid://p3wkkm523vyh" path="res://scripts/thief_controller.gd" id="3_qhqgy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
@@ -14,13 +14,11 @@ collision_mask = 3
 shape = SubResource("CapsuleShape2D_qhqgy")
 debug_color = Color(0, 0.6, 0.69803923, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2091825122]
-scale = Vector2(0.71875, 0.71875)
-texture = ExtResource("1_qhqgy")
-
 [node name="InputHandler" type="Node" parent="." unique_id=1696016644]
 script = ExtResource("3_qhqgy")
 
 [node name="Movement" type="Node" parent="." unique_id=1606337752]
 unique_name_in_owner = true
 script = ExtResource("1_g2els")
+
+[node name="Character" parent="." unique_id=474885732 instance=ExtResource("3_dqkch")]
