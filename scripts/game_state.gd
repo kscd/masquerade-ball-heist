@@ -24,8 +24,9 @@ func switch_to_menu():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	GameEvents.object_clicked.connect(_on_cursor_mouse_event)
 	resetState()
-	switch_to_menu()
+	# switch_to_menu()
 	print("Gamestate loaded 💫")
 
 func _on_cursor_mouse_event(hit):
