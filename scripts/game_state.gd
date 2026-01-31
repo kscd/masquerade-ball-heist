@@ -6,11 +6,13 @@ enum State { MENU, PLAYING }
 var current_state
 
 var is_first_player_turn
+var round_score
 var player_score_0
 var player_score_1
 
 func resetState():
 	is_first_player_turn = true
+	round_score = 0
 	player_score_0 = 0
 	player_score_1 = 0
 
@@ -35,3 +37,7 @@ func _on_cursor_mouse_event(hit):
 	if hit is Player:
 		is_first_player_turn = !is_first_player_turn
 		# TODO: Add player switch Scene
+		
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass

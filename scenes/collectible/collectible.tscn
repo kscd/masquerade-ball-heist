@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cwtxm4jsk4ewh"]
+
+[ext_resource type="Script" uid="uid://devfhgcu0bnrh" path="res://scripts/collector.gd" id="2_1pg6c"]
+
+[node name="Collectible" type="Area2D" unique_id=1076301399]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1290253588]
+debug_color = Color(0.9786877, 0, 0.39796534, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1305595392]
+
+[node name="Timer" type="Timer" parent="." unique_id=2100784575]
+unique_name_in_owner = true
+
+[node name="Collector" type="Node" parent="." unique_id=1045779217]
+script = ExtResource("2_1pg6c")
+
+[connection signal="body_entered" from="." to="Collector" method="_on_collectible_body_entered"]
+[connection signal="body_exited" from="." to="Collector" method="_on_collectible_body_exited"]
+[connection signal="timeout" from="Timer" to="Collector" method="_on_timer_timeout"]

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bhtx7d8nan6qt"]
+
+[ext_resource type="PackedScene" uid="uid://cwtxm4jsk4ewh" path="res://scenes/collectible/collectible.tscn" id="1_16hm5"]
+[ext_resource type="Texture2D" uid="uid://bnoeahg7mcapv" path="res://icon.svg" id="2_v5n5r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w3m3o"]
+radius = 101.00495
+
+[node name="Collectible" unique_id=1076301399 instance=ExtResource("1_16hm5")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=1290253588]
+shape = SubResource("CircleShape2D_w3m3o")
+
+[node name="Sprite2D" parent="." index="1" unique_id=1305595392]
+texture = ExtResource("2_v5n5r")

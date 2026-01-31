@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://drdglsewf7lwx"]
 
 [ext_resource type="PackedScene" uid="uid://c30c6v3tnaph1" path="res://scenes/player.tscn" id="1_tjjfe"]
-[ext_resource type="PackedScene" uid="uid://cwtxm4jsk4ewh" path="res://scenes/collectible.tscn" id="2_3qupv"]
+[ext_resource type="PackedScene" uid="uid://bhtx7d8nan6qt" path="res://scenes/collectible/collectible_sample.tscn" id="2_tjjfe"]
+[ext_resource type="PackedScene" uid="uid://bxlyvl12pgcvr" path="res://scenes/obstacle/obstacle.tscn" id="3_3qupv"]
 
 [node name="Sam" type="Node2D" unique_id=2027881017]
 
 [node name="Player" parent="." unique_id=637585576 instance=ExtResource("1_tjjfe")]
 position = Vector2(750, 433)
 
-[node name="Collectible" parent="." unique_id=1076301399 instance=ExtResource("2_3qupv")]
-position = Vector2(394, 442)
+[node name="Collectible" parent="." unique_id=1076301399 instance=ExtResource("2_tjjfe")]
+position = Vector2(468, 435)
+
+[node name="Obstacle" parent="." unique_id=1070146420 instance=ExtResource("3_3qupv")]
+position = Vector2(951, 442)
