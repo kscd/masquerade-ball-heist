@@ -42,7 +42,7 @@ func _on_cursor_mouse_event(hit):
 		if current_lives <= 0:
 			print("lose")
 			# TODO: Add player switch Scene
-		if current_lives <= -1:
+		if current_lives > -1:
 			GameEvents.lives_changed.emit(current_lives)
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
