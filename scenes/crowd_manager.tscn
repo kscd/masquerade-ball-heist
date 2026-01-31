@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d25fgre156d1g"]
+
+[ext_resource type="Script" uid="uid://br05f7g0hrkdf" path="res://scripts/crowd_manager.gd" id="1_y2edp"]
+[ext_resource type="PackedScene" uid="uid://cni6u1uipxgpi" path="res://scenes/crowd_agent.tscn" id="2_ikxhy"]
+
+[node name="CrowdManager" type="Node2D" unique_id=61583125]
+script = ExtResource("1_y2edp")
+
+[node name="CrowdAgent" parent="." unique_id=2001980890 instance=ExtResource("2_ikxhy")]
+
+[node name="CrowdAgent2" parent="." unique_id=438331823 instance=ExtResource("2_ikxhy")]
+position = Vector2(1000, 500)
+
+[node name="CrowdAgent3" parent="." unique_id=1756758130 instance=ExtResource("2_ikxhy")]
+position = Vector2(0, 200)
