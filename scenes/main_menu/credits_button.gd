@@ -1,4 +1,5 @@
 extends Button
 
 func _on_pressed():
-	pass
+	var credits_menu_scene = load("uid://d4cj8ut00iuwg")
+	get_tree().change_scene_to_packed(credits_menu_scene)
