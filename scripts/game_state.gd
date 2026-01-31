@@ -26,7 +26,6 @@ func switch_to_menu():
 func _ready():
 	GameEvents.object_clicked.connect(_on_cursor_mouse_event)
 	resetState()
-	# switch_to_menu()
 	print("Gamestate loaded 💫")
 
 func _on_cursor_mouse_event(hit):
@@ -35,7 +34,4 @@ func _on_cursor_mouse_event(hit):
 	print("HIT 📍 ", hit)
 	if hit is Player:
 		is_first_player_turn = !is_first_player_turn
-		
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+		# TODO: Add player switch Scene
