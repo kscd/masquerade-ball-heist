@@ -37,12 +37,12 @@ func _on_cursor_mouse_event(hit):
 	print("HIT 📍 ", hit)
 	if hit.is_in_group("player"):
 		print("win")
-	else:
+	if hit.is_in_group("npc"):
 		current_lives = current_lives - 1
 		if current_lives <= 0:
 			print("lose")
 			# TODO: Add player switch Scene
-		else:
+		if current_lives <= -1:
 			GameEvents.lives_changed.emit(current_lives)
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.

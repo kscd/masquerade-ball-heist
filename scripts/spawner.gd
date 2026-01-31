@@ -52,6 +52,7 @@ func spawn_single_entity():
 		
 	if valid_spot:
 		var entity = preload("res://scenes/crowd_agent.tscn").instantiate()
+		entity.add_to_group("npc")
 		crowd_manager.add_child(entity)
 		entity.global_position = final_pos 
 		
