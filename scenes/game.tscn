@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="4_dinhu"]
 [ext_resource type="PackedScene" uid="uid://0dt8el4fbxxp" path="res://scenes/screens/hud.tscn" id="5_kvuet"]
 [ext_resource type="Texture2D" uid="uid://sc52d2ue8ugc" path="res://sprites/mansion-reference.png" id="6_trtic"]
-[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="7_ir15t"]
+[ext_resource type="PackedScene" uid="uid://d17ncw2rb7hk3" path="res://scenes/spawner.tscn" id="7_ir15t"]
 [ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="8_ca42v"]
-[ext_resource type="PackedScene" uid="uid://07e6jj7kwoxb" path="res://scenes/exit.tscn" id="9_rysoc"]
+[ext_resource type="PackedScene" path="res://scenes/exit.tscn" id="9_rysoc"]
 [ext_resource type="Texture2D" uid="uid://cvohb2e50k8eb" path="res://sprites/icon-heart.png" id="10_02fa5"]
 [ext_resource type="Texture2D" uid="uid://dlxvluvdcxs25" path="res://sprites/mansion/walls-bottom-left.png" id="11_37s47"]
 [ext_resource type="PackedScene" uid="uid://ci0a06vd7pff7" path="res://scenes/obstacle/table.tscn" id="11_dinhu"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://wqh1idvrd0cl" path="res://sprites/mansion/balcony-handrailing-inner.png" id="22_qouja"]
 [ext_resource type="Texture2D" uid="uid://bkupqkfnit3e1" path="res://sprites/mansion/walls-top-right.png" id="22_v2yb1"]
 [ext_resource type="Texture2D" uid="uid://c5fxmsa88a7fs" path="res://sprites/mansion/balcony-handrailing-outer.png" id="23_wljb1"]
+[ext_resource type="Texture2D" uid="uid://bmfp73d51f7pn" path="res://sprites/mansion/pillar-01.png" id="24_twgab"]
 [ext_resource type="Texture2D" uid="uid://b0elotgbq4500" path="res://sprites/mansion/balcony-staris.png" id="24_v2yb1"]
 [ext_resource type="PackedScene" uid="uid://ccedgwko5vjli" path="res://scenes/obstacle/dresser.tscn" id="27_qouja"]
 [ext_resource type="PackedScene" uid="uid://bf1ad0p1sbfl3" path="res://scenes/obstacle/chair1.tscn" id="28_v2yb1"]
@@ -116,6 +117,7 @@ mgr = NodePath("../CrowdManager")
 [node name="Seeker" parent="." unique_id=1225841198 instance=ExtResource("4_dinhu")]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1380014506]
+visible = false
 position = Vector2(879, -837)
 texture = ExtResource("6_trtic")
 offset = Vector2(1169, 1989)
@@ -171,6 +173,7 @@ scale = Vector2(1, 1.003061)
 shape = SubResource("RectangleShape2D_rm0al")
 
 [node name="BlackOverlay" type="Polygon2D" parent="." unique_id=902701172]
+visible = false
 z_index = 3
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-31, 2348, 4135, 2348, 4143, -70, -69, -74)
@@ -317,6 +320,16 @@ position = Vector2(1637.7091, 456.2551)
 rotation = -3.1403239
 shape = SubResource("RectangleShape2D_8qswn")
 
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=1722832096]
+position = Vector2(885.91547, 200.46948)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_gxtfn")
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=106185618]
+position = Vector2(1035.6807, 200.939)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_gxtfn")
+
 [node name="WallSprites" type="Node2D" parent="Mansion" unique_id=634167613]
 y_sort_enabled = true
 
@@ -409,6 +422,49 @@ polygon = PackedVector2Array(-654, 808, -642, 704, -593, 588, -501, 474, -409, 4
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Mansion/BalconyCollider" unique_id=1655255383]
 scale = Vector2(-1, 1)
 polygon = PackedVector2Array(-405, 824, -385, 752, -332, 671, -260, 632, -197, 621, 5, 623, 2, 650, -189, 651, -252, 658, -314, 696, -362, 760, -377, 832)
+
+[node name="Pillers" type="Node2D" parent="Mansion" unique_id=995079627]
+y_sort_enabled = true
+
+[node name="Pillar01" type="Sprite2D" parent="Mansion/Pillers" unique_id=1708893996]
+position = Vector2(-161, 49)
+texture = ExtResource("24_twgab")
+offset = Vector2(0, -69)
+
+[node name="Pillar02" type="Sprite2D" parent="Mansion/Pillers" unique_id=1435413916]
+position = Vector2(160, 49)
+texture = ExtResource("24_twgab")
+offset = Vector2(0, -69)
+
+[node name="Pillar03" type="Sprite2D" parent="Mansion/Pillers" unique_id=803370574]
+position = Vector2(-161, -206)
+texture = ExtResource("24_twgab")
+offset = Vector2(0, -69)
+
+[node name="Pillar04" type="Sprite2D" parent="Mansion/Pillers" unique_id=127031791]
+position = Vector2(160, -206)
+texture = ExtResource("24_twgab")
+offset = Vector2(0, -69)
+
+[node name="Pillar05" type="Sprite2D" parent="Mansion/Pillers" unique_id=537429969]
+position = Vector2(-161, -462)
+texture = ExtResource("24_twgab")
+offset = Vector2(0, -69)
+
+[node name="Pillar06" type="Sprite2D" parent="Mansion/Pillers" unique_id=1942499534]
+position = Vector2(160, -462)
+texture = ExtResource("24_twgab")
+offset = Vector2(0, -69)
+
+[node name="Pillar07" type="Sprite2D" parent="Mansion/Pillers" unique_id=660360475]
+position = Vector2(-161, -716)
+texture = ExtResource("24_twgab")
+offset = Vector2(0, -69)
+
+[node name="Pillar08" type="Sprite2D" parent="Mansion/Pillers" unique_id=259598624]
+position = Vector2(160, -716)
+texture = ExtResource("24_twgab")
+offset = Vector2(0, -69)
 
 [node name="Obstacle2" parent="." unique_id=436183618 instance=ExtResource("11_dinhu")]
 position = Vector2(640, 1203)
