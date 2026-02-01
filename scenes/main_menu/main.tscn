@@ -8,6 +8,7 @@
 [ext_resource type="LabelSettings" uid="uid://br33vnfar1uca" path="res://shared/main_menu_label.tres" id="2_u4kfk"]
 [ext_resource type="Script" uid="uid://cr8ik7pa5xyid" path="res://scenes/main_menu/credits_button.gd" id="3_n6eec"]
 [ext_resource type="Texture2D" uid="uid://eaojonf3pk7a" path="res://shared/background.png" id="3_umpbu"]
+[ext_resource type="Texture2D" uid="uid://dqofg1ok0xm5e" path="res://sprites/title.png" id="5_sm2n3"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=71320408]
 
@@ -48,7 +49,17 @@ script = ExtResource("1_af3ms")
 layout_mode = 2
 theme_override_constants/separation = 1400
 
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1925029399]
+layout_mode = 2
+theme_override_constants/margin_left = 750
+theme_override_constants/margin_right = 750
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=706686943]
+layout_mode = 2
+texture = ExtResource("5_sm2n3")
+
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=486251573]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 100
 text = "Masquerade Ball Heist"
