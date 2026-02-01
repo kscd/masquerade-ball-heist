@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bbc4x8h6hbnoh"]
+
+[ext_resource type="Texture2D" uid="uid://78p6skqf854n" path="res://sprites/mansion/vase-02.png" id="1_yvdcd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ys07"]
+size = Vector2(47, 93.5)
+
+[node name="Obstacle" type="StaticBody2D" unique_id=1070146420]
+z_index = -64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1471676894]
+position = Vector2(-0.5, 0.25)
+shape = SubResource("RectangleShape2D_1ys07")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=613815491]
+texture = ExtResource("1_yvdcd")

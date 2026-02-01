@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cfstmdybyost4"]
+
+[ext_resource type="Texture2D" uid="uid://ddg2um1p8qvgt" path="res://sprites/mansion/picture-05.png" id="1_ntcpp"]
+
+[node name="Obstacle" type="StaticBody2D" unique_id=1070146420]
+z_index = -64
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=613815491]
+texture = ExtResource("1_ntcpp")
