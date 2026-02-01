@@ -34,5 +34,3 @@ func _input(event):
 
 func continue_game():
 	GameState.nextRound()
-	get_tree().paused = false
-	get_tree().reload_current_scene()

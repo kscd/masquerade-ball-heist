@@ -4,8 +4,8 @@
 
 [node name="ScoreBar" type="Node2D" unique_id=738787395]
 script = ExtResource("1_cdh2m")
-score_0 = 1112
-score_1 = 1125
+score_0 = 156
+score_1 = 76
 time_phase_2 = 2.0
 
 [node name="Player1Bar" type="ProgressBar" parent="." unique_id=765712733]
@@ -33,6 +33,3 @@ offset_left = -3.0
 offset_top = 24.0
 offset_right = 37.0
 offset_bottom = 47.0
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1145049430]
-sub_emitter = NodePath(".")

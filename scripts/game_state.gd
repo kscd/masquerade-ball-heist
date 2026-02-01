@@ -22,9 +22,14 @@ func resetState():
 	current_lives = max_lives
 	
 func nextRound():
+	if player_score_0 >= winning_score || player_score_1 >= winning_score:
+		switch_to_game_over()
+		return
 	is_first_player_turn = !is_first_player_turn
 	round_score = 0
 	current_lives = max_lives
+	get_tree().paused = false
+	get_tree().reload_current_scene()
 	
 func switch_to_level():
 	current_state = State.PLAYING
@@ -41,8 +46,6 @@ func switch_to_round_over(condition: Round_end_condition):
 			player_score_0 += round_score
 		else:
 			player_score_1 += round_score
-	if player_score_0 >= winning_score || player_score_1 >= winning_score:
-		switch_to_game_over()
 
 func switch_to_game_over():
 	GameEvents.game_over.emit()

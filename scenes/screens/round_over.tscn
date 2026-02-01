@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cjt5kbbu0p3k3"]
 
-[ext_resource type="Script" uid="uid://h3ijtmf8nbfy" path="res://scripts/screens/round_over.gd" id="1_apvsg"]
+[ext_resource type="Script" uid="uid://h3ijtmf8nbfy" path="res://scenes/screens/round_over.gd" id="1_apvsg"]
 [ext_resource type="LabelSettings" uid="uid://6hkdaf5umo4l" path="res://shared/countdown_menu_label.tres" id="2_6qemi"]
-[ext_resource type="LabelSettings" path="res://shared/player_label_settings.tres" id="2_tjyb7"]
+[ext_resource type="LabelSettings" uid="uid://dhqfy6pohtndf" path="res://shared/player_label_settings.tres" id="2_tjyb7"]
 
 [node name="RoundOver" type="Control" unique_id=276531622]
 process_mode = 3

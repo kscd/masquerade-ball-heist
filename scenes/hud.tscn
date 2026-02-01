@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://0dt8el4fbxxp"]
+[gd_scene format=3 uid="uid://cugwnajbo70o7"]
 
 [ext_resource type="Script" uid="uid://dvkm2gl71qlf4" path="res://scenes/screens/hud.gd" id="1_ahhtf"]
 [ext_resource type="Texture2D" uid="uid://bnoeahg7mcapv" path="res://icon.svg" id="2_oo0fn"]
