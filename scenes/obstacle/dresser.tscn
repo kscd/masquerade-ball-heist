@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ccedgwko5vjli"]
+
+[ext_resource type="Texture2D" uid="uid://cy6h0ru5xf7wo" path="res://sprites/mansion/dresser-01.png" id="1_qpviw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ys07"]
+size = Vector2(107, 268)
+
+[node name="Obstacle" type="StaticBody2D" unique_id=1070146420]
+z_index = -64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1471676894]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_1ys07")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=613815491]
+texture = ExtResource("1_qpviw")

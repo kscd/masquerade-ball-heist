@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="4_dinhu"]
 [ext_resource type="PackedScene" uid="uid://0dt8el4fbxxp" path="res://scenes/screens/hud.tscn" id="5_kvuet"]
 [ext_resource type="Texture2D" uid="uid://sc52d2ue8ugc" path="res://sprites/mansion-reference.png" id="6_trtic"]
-[ext_resource type="PackedScene" uid="uid://d17ncw2rb7hk3" path="res://scenes/spawner.tscn" id="7_ir15t"]
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="7_ir15t"]
 [ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="8_ca42v"]
-[ext_resource type="PackedScene" path="res://scenes/exit.tscn" id="9_rysoc"]
+[ext_resource type="PackedScene" uid="uid://07e6jj7kwoxb" path="res://scenes/exit.tscn" id="9_rysoc"]
 [ext_resource type="Texture2D" uid="uid://dlxvluvdcxs25" path="res://sprites/mansion/walls-bottom-left.png" id="11_37s47"]
 [ext_resource type="PackedScene" uid="uid://ci0a06vd7pff7" path="res://scenes/obstacle/table.tscn" id="11_dinhu"]
 [ext_resource type="Texture2D" uid="uid://cv583ukfkbnf" path="res://sprites/mansion/walls-bottom-right.png" id="12_bt5mj"]
@@ -31,8 +31,13 @@
 [ext_resource type="Texture2D" uid="uid://bkupqkfnit3e1" path="res://sprites/mansion/walls-top-right.png" id="22_v2yb1"]
 [ext_resource type="Texture2D" uid="uid://c5fxmsa88a7fs" path="res://sprites/mansion/balcony-handrailing-outer.png" id="23_wljb1"]
 [ext_resource type="Texture2D" uid="uid://b0elotgbq4500" path="res://sprites/mansion/balcony-staris.png" id="24_v2yb1"]
+[ext_resource type="PackedScene" uid="uid://ccedgwko5vjli" path="res://scenes/obstacle/dresser.tscn" id="27_qouja"]
+[ext_resource type="PackedScene" uid="uid://bf1ad0p1sbfl3" path="res://scenes/obstacle/chair1.tscn" id="28_v2yb1"]
+[ext_resource type="PackedScene" uid="uid://c40pjfajvokel" path="res://scenes/collectible/gem.tscn" id="30_wljb1"]
+[ext_resource type="PackedScene" uid="uid://b3jbmlmpv1ig8" path="res://scenes/collectible/necklace.tscn" id="31_v2yb1"]
+[ext_resource type="PackedScene" uid="uid://cb4jygi2b66c8" path="res://scenes/collectible/money_stack1.tscn" id="33_js0lu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sww3w"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rm0al"]
 resource_local_to_scene = true
 size = Vector2(292, 222.31949)
 
@@ -122,7 +127,6 @@ position = Vector2(1241, 410)
 [node name="HUD" parent="." unique_id=925397185 instance=ExtResource("5_kvuet")]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1380014506]
-visible = false
 position = Vector2(879, -837)
 texture = ExtResource("6_trtic")
 offset = Vector2(1169, 1989)
@@ -168,7 +172,7 @@ position = Vector2(2052, 132)
 [node name="CollisionShape2D" parent="Exit" index="0" unique_id=1702538791]
 position = Vector2(-14, 10.5)
 scale = Vector2(1, 1.003061)
-shape = SubResource("RectangleShape2D_sww3w")
+shape = SubResource("RectangleShape2D_rm0al")
 
 [node name="BlackOverlay" type="Polygon2D" parent="." unique_id=902701172]
 visible = false
@@ -414,14 +418,16 @@ polygon = PackedVector2Array(-405, 824, -385, 752, -332, 671, -260, 632, -197, 6
 position = Vector2(640, 1203)
 
 [node name="Obstacle3" parent="." unique_id=1187680134 instance=ExtResource("12_kvuet")]
-position = Vector2(246, 1948)
+position = Vector2(3158, 1321)
 
 [node name="Obstacle4" parent="." unique_id=1521932405 instance=ExtResource("12_trtic")]
-position = Vector2(182, 1700)
+position = Vector2(1002, 1699)
+scale = Vector2(-1, 1)
 
 [node name="Obstacle5" parent="." unique_id=459985089 instance=ExtResource("13_trtic")]
 z_index = -65
-position = Vector2(342, 1701)
+position = Vector2(840, 1700)
+scale = Vector2(-1, 1)
 
 [node name="Obstacle6" parent="." unique_id=1101301526 instance=ExtResource("14_rysoc")]
 position = Vector2(3277, 727)
@@ -435,11 +441,49 @@ position = Vector2(3277, 387)
 [node name="Obstacle9" parent="." unique_id=439093691 instance=ExtResource("14_rysoc")]
 position = Vector2(3697, 386)
 
+[node name="Obstacle10" parent="." unique_id=46878932 instance=ExtResource("12_kvuet")]
+position = Vector2(3155, 1714)
+
+[node name="Obstacle11" parent="." unique_id=1094523153 instance=ExtResource("27_qouja")]
+position = Vector2(3914, 1299)
+
+[node name="Obstacle12" parent="." unique_id=2036106187 instance=ExtResource("27_qouja")]
+position = Vector2(3915, 1512)
+
+[node name="Obstacle13" parent="." unique_id=1851108864 instance=ExtResource("28_v2yb1")]
+position = Vector2(502, 1110)
+scale = Vector2(-1, 1)
+
+[node name="Obstacle14" parent="." unique_id=1687874613 instance=ExtResource("28_v2yb1")]
+position = Vector2(501, 993)
+scale = Vector2(-1, 1)
+
+[node name="Obstacle15" parent="." unique_id=1796565841 instance=ExtResource("28_v2yb1")]
+position = Vector2(779, 1117)
+
+[node name="Obstacle16" parent="." unique_id=1949531119 instance=ExtResource("28_v2yb1")]
+position = Vector2(781, 1003)
+
 [node name="Collectible2" parent="." unique_id=921361450 instance=ExtResource("14_ir15t")]
-position = Vector2(307, 1733)
+position = Vector2(877, 1731)
 
 [node name="Collectible3" parent="." unique_id=1628721972 instance=ExtResource("16_ssvqc")]
 z_index = -64
 position = Vector2(636, 1393)
+
+[node name="Collectible5" parent="." unique_id=1651253344 instance=ExtResource("30_wljb1")]
+position = Vector2(3211, 711)
+
+[node name="Collectible6" parent="." unique_id=1941014537 instance=ExtResource("30_wljb1")]
+position = Vector2(3761, 369)
+
+[node name="Collectible4" parent="." unique_id=1302061636 instance=ExtResource("33_js0lu")]
+position = Vector2(577, 1059)
+
+[node name="Collectible7" parent="." unique_id=1834759528 instance=ExtResource("30_wljb1")]
+position = Vector2(3243, 1259)
+
+[node name="Collectible8" parent="." unique_id=579167624 instance=ExtResource("31_v2yb1")]
+position = Vector2(3089, 1792)
 
 [editable path="Exit"]
