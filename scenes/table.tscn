@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://djw2f8qcd0m7h"]
+
+[ext_resource type="PackedScene" uid="uid://bxlyvl12pgcvr" path="res://scenes/obstacle/obstacle.tscn" id="1_eotx8"]
+[ext_resource type="Texture2D" uid="uid://lfrtigwhpfhy" path="res://sprites/mansion/bed-01.png" id="2_x8522"]
+
+[node name="Obstacle" unique_id=1070146420 instance=ExtResource("1_eotx8")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=613815491]
+texture = ExtResource("2_x8522")

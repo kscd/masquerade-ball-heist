@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="8_ca42v"]
 [ext_resource type="PackedScene" uid="uid://07e6jj7kwoxb" path="res://scenes/exit.tscn" id="9_rysoc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssvqc"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tnpc"]
 resource_local_to_scene = true
 size = Vector2(550, 189.4202)
 
@@ -76,6 +76,10 @@ position = Vector2(2052, 132)
 
 [node name="CollisionShape2D" parent="Exit" index="0" unique_id=1702538791]
 scale = Vector2(1, 1.003061)
-shape = SubResource("RectangleShape2D_ssvqc")
+shape = SubResource("RectangleShape2D_0tnpc")
+
+[node name="BlackOverlay" type="Polygon2D" parent="." unique_id=902701172]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-31, 2348, 4135, 2348, 4143, -70, -69, -74)
 
 [editable path="Exit"]

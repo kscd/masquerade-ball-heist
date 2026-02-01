@@ -10,16 +10,30 @@
 resource_local_to_scene = true
 size = Vector2(550, 189.4202)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fbhgu"]
+
 [node name="LevelMain" type="Node2D" unique_id=846572867]
+
+[node name="Game" parent="." unique_id=172343982 instance=ExtResource("6_q5k7n")]
+unique_name_in_owner = true
+z_as_relative = false
+
+[node name="Player" parent="Game" index="0" unique_id=637585576]
+z_as_relative = false
+
+[node name="CollisionShape2D" parent="Game/Exit" parent_id_path=PackedInt32Array(172343982, 1118414250) index="0" unique_id=1702538791]
+shape = SubResource("RectangleShape2D_fbhgu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1246356014]
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=73417313]
+z_as_relative = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_fbhgu")
 script = ExtResource("1_vwe0s")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Panel" unique_id=357749453]
@@ -56,13 +70,6 @@ vertical_alignment = 1
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=739974004]
 
 [node name="RoundOver" parent="CanvasLayer2" unique_id=276531622 instance=ExtResource("5_fbhgu")]
-
-[node name="Game" parent="." unique_id=172343982 instance=ExtResource("6_q5k7n")]
-unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0)
-
-[node name="CollisionShape2D" parent="Game/Exit" parent_id_path=PackedInt32Array(172343982, 1118414250) index="0" unique_id=1702538791]
-shape = SubResource("RectangleShape2D_fbhgu")
 
 [editable path="Game"]
 [editable path="Game/Exit"]

@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="4_hu0ac"]
 [ext_resource type="PackedScene" uid="uid://0dt8el4fbxxp" path="res://scenes/screens/hud.tscn" id="5_3x846"]
 [ext_resource type="Texture2D" uid="uid://sc52d2ue8ugc" path="res://sprites/mansion-reference.png" id="6_cdoi4"]
-[ext_resource type="PackedScene" uid="uid://d17ncw2rb7hk3" path="res://scenes/spawner.tscn" id="7_sm15i"]
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="7_sm15i"]
 [ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="8_j82p7"]
-[ext_resource type="PackedScene" path="res://scenes/exit.tscn" id="9_j82p7"]
+[ext_resource type="PackedScene" uid="uid://07e6jj7kwoxb" path="res://scenes/exit.tscn" id="9_j82p7"]
 [ext_resource type="PackedScene" uid="uid://cjt5kbbu0p3k3" path="res://scenes/screens/round_over.tscn" id="10_g0yun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g0yun"]
@@ -77,5 +77,8 @@ shape = SubResource("RectangleShape2D_g0yun")
 
 [node name="Collectible" parent="." unique_id=1281650298 instance=ExtResource("2_tjjfe")]
 position = Vector2(781, 719)
+
+[node name="Obstacle2" parent="." unique_id=88084160 instance=ExtResource("3_3qupv")]
+position = Vector2(1600, 831)
 
 [editable path="Exit"]
