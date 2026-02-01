@@ -27,7 +27,10 @@
 [ext_resource type="Texture2D" uid="uid://my7eld3mlsuq" path="res://sprites/mansion/walls-center-top.png" id="18_suyxu"]
 [ext_resource type="Texture2D" uid="uid://bqmef2dqb5t3g" path="res://sprites/mansion/walls-outline.png" id="20_qouja"]
 [ext_resource type="Texture2D" uid="uid://coxo7eu6m0ii4" path="res://sprites/mansion/walls-top-left.png" id="21_wljb1"]
+[ext_resource type="Texture2D" uid="uid://wqh1idvrd0cl" path="res://sprites/mansion/balcony-handrailing-inner.png" id="22_qouja"]
 [ext_resource type="Texture2D" uid="uid://bkupqkfnit3e1" path="res://sprites/mansion/walls-top-right.png" id="22_v2yb1"]
+[ext_resource type="Texture2D" uid="uid://c5fxmsa88a7fs" path="res://sprites/mansion/balcony-handrailing-outer.png" id="23_wljb1"]
+[ext_resource type="Texture2D" uid="uid://b0elotgbq4500" path="res://sprites/mansion/balcony-staris.png" id="24_v2yb1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sww3w"]
 resource_local_to_scene = true
@@ -43,7 +46,7 @@ size = Vector2(681.2066, 14.697885)
 size = Vector2(332.3728, 16.707848)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wljb1"]
-size = Vector2(503.7451, 16.707848)
+size = Vector2(502.33667, 28.072247)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2yb1"]
 size = Vector2(204.34001, 16.707848)
@@ -94,7 +97,7 @@ size = Vector2(572.73755, 15.879459)
 size = Vector2(754.42395, 24.026545)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8qswn"]
-size = Vector2(484.24823, 16.708065)
+size = Vector2(483.94894, 40.44162)
 
 [node name="Game" type="Node2D" unique_id=172343982]
 z_as_relative = false
@@ -196,7 +199,7 @@ rotation = 1.5731338
 shape = SubResource("RectangleShape2D_qouja")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=1318454365]
-position = Vector2(287.56403, 757.74646)
+position = Vector2(286.8598, 752.0643)
 rotation = -3.1415925
 shape = SubResource("RectangleShape2D_wljb1")
 
@@ -310,7 +313,7 @@ rotation = -3.1403239
 shape = SubResource("RectangleShape2D_fedci")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=1094565877]
-position = Vector2(1637.5585, 456.8075)
+position = Vector2(1637.7234, 444.94092)
 rotation = -3.1403239
 shape = SubResource("RectangleShape2D_8qswn")
 
@@ -379,6 +382,17 @@ y_sort_enabled = true
 position = Vector2(-936.75, 877.82007)
 texture = ExtResource("14_pl11u")
 offset = Vector2(936.75, -877.82)
+
+[node name="BalconySprites" type="Node2D" parent="Mansion" unique_id=1811378852]
+
+[node name="BalconyHandrailingInner" type="Sprite2D" parent="Mansion/BalconySprites" unique_id=1478384895]
+texture = ExtResource("22_qouja")
+
+[node name="BalconyHandrailingOuter" type="Sprite2D" parent="Mansion/BalconySprites" unique_id=685066141]
+texture = ExtResource("23_wljb1")
+
+[node name="BalconyStaris" type="Sprite2D" parent="Mansion/BalconySprites" unique_id=1189705158]
+texture = ExtResource("24_v2yb1")
 
 [node name="Obstacle2" parent="." unique_id=436183618 instance=ExtResource("11_dinhu")]
 position = Vector2(640, 1203)
