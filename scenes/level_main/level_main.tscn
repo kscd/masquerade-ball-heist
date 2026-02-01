@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cjt5kbbu0p3k3" path="res://scenes/screens/round_over.tscn" id="5_fbhgu"]
 [ext_resource type="PackedScene" uid="uid://dt77m0c81f1n2" path="res://scenes/game.tscn" id="6_q5k7n"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_enupx"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbhgu"]
 resource_local_to_scene = true
 size = Vector2(550, 189.4202)
 
@@ -62,7 +62,7 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 
 [node name="CollisionShape2D" parent="Game/Exit" parent_id_path=PackedInt32Array(172343982, 1118414250) index="0" unique_id=1702538791]
-shape = SubResource("RectangleShape2D_enupx")
+shape = SubResource("RectangleShape2D_fbhgu")
 
 [editable path="Game"]
 [editable path="Game/Exit"]

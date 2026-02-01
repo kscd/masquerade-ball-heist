@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dt77m0c81f1n2"]
 
 [ext_resource type="PackedScene" uid="uid://c30c6v3tnaph1" path="res://scenes/player.tscn" id="1_0tnpc"]
+[ext_resource type="Script" uid="uid://dsmhgnyq1ks6f" path="res://scripts/game.gd" id="1_vtaks"]
 [ext_resource type="PackedScene" uid="uid://bhtx7d8nan6qt" path="res://scenes/collectible/collectible_sample.tscn" id="2_vtaks"]
 [ext_resource type="PackedScene" uid="uid://bxlyvl12pgcvr" path="res://scenes/obstacle/obstacle.tscn" id="3_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="4_dinhu"]
@@ -15,9 +16,11 @@ resource_local_to_scene = true
 size = Vector2(550, 189.4202)
 
 [node name="Game" type="Node2D" unique_id=172343982]
+script = ExtResource("1_vtaks")
 
-[node name="Player" parent="." unique_id=637585576 instance=ExtResource("1_0tnpc")]
+[node name="Player" parent="." unique_id=637585576 groups=["player"] instance=ExtResource("1_0tnpc")]
 position = Vector2(750, 433)
+collision_layer = 3
 
 [node name="Collectible" parent="." unique_id=1076301399 instance=ExtResource("2_vtaks")]
 position = Vector2(468, 435)
