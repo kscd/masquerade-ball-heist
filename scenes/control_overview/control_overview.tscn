@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bswfnkxv33unh"]
 
 [ext_resource type="LabelSettings" uid="uid://br33vnfar1uca" path="res://shared/main_menu_label.tres" id="1_23vv7"]
+[ext_resource type="Texture2D" uid="uid://eaojonf3pk7a" path="res://shared/background.png" id="1_wq3uq"]
 [ext_resource type="Script" uid="uid://cvcq1uxxfig0b" path="res://scenes/control_overview/margin_container.gd" id="1_xokas"]
 [ext_resource type="Script" uid="uid://bb3mvk51yp8ep" path="res://scenes/control_overview/start_button.gd" id="2_23vv7"]
 [ext_resource type="Script" uid="uid://bldtdecrmw3yy" path="res://scenes/control_overview/back_button.gd" id="2_a82xa"]
@@ -11,6 +12,23 @@
 [ext_resource type="StyleBox" uid="uid://bvqptd3tfk13j" path="res://shared/new_style_box_flat.tres" id="5_dge5s"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=667254874]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1957902557]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wq3uq")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1869006868]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3019608, 0, 0, 0.8156863)
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1526756598]
 anchors_preset = 15
