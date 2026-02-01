@@ -8,6 +8,23 @@ extends Node2D
 @export var body_options: Array[Texture2D]
 @export var legs_options: Array[Texture2D]
 
+
+@export var min_scale: float = 0.8
+@export var max_scale: float = 1.1
+
+func _process(_delta):
+	# Get the current height of the game window
+	var screen_height = get_viewport_rect().size.y
+	
+	# Map position (0 to screen_height) to scale (min to max)
+	var scale_factor = remap(global_position.y, 0, screen_height, max_scale, min_scale)
+	
+	# Keep it within your defined limits
+	scale_factor = clamp(scale_factor, min_scale, max_scale)
+	
+	# Apply scaling
+	scale = Vector2(1, scale_factor)
+
 func _ready():
 	randomize_character()
 
