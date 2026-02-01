@@ -4,12 +4,16 @@
 [ext_resource type="Script" uid="uid://de72u0s3082bh" path="res://scripts/movement.gd" id="2_xis0x"]
 [ext_resource type="PackedScene" uid="uid://bdrfq6cj47gsp" path="res://scenes/character.tscn" id="3_xis0x"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xis0x"]
-radius = 14.0
-height = 68.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_xis0x"]
+radius = 17.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qt0yl"]
+radius = 24.0
+height = 114.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=737167328]
 collision_layer = 4
+collision_mask = 5
 script = ExtResource("1_ptrki")
 max_sight = 1000.0
 repick_interval = 5.0
@@ -22,8 +26,17 @@ max_total_push = 40000.0
 unique_name_in_owner = true
 script = ExtResource("2_xis0x")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1668405674]
+[node name="Collider" type="CollisionShape2D" parent="." unique_id=1668405674]
 unique_name_in_owner = true
-shape = SubResource("CapsuleShape2D_xis0x")
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_xis0x")
 
 [node name="Character" parent="." unique_id=474885732 instance=ExtResource("3_xis0x")]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=437539450 groups=["npc"]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1912430571]
+position = Vector2(0, -44)
+shape = SubResource("CapsuleShape2D_qt0yl")

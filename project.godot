@@ -29,6 +29,7 @@ window/stretch/mode="canvas_items"
 [global_group]
 
 player="Group for playable characters"
+npc="Group for non player characters"
 
 [input]
 
