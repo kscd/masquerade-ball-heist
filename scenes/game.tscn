@@ -18,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://df6ikhubxhr7q" path="res://sprites/mansion/walls-center-top-left.png" id="16_qnb83"]
 [ext_resource type="Texture2D" uid="uid://cm80xsfsa11sb" path="res://sprites/mansion/walls-center-top-right.png" id="17_sww3w"]
 [ext_resource type="Texture2D" uid="uid://my7eld3mlsuq" path="res://sprites/mansion/walls-center-top.png" id="18_suyxu"]
-[ext_resource type="Texture2D" uid="uid://dkph3hil46rw4" path="res://sprites/mansion/walls-center.png" id="19_sgl2t"]
 [ext_resource type="Texture2D" uid="uid://bqmef2dqb5t3g" path="res://sprites/mansion/walls-outline.png" id="20_qouja"]
 [ext_resource type="Texture2D" uid="uid://coxo7eu6m0ii4" path="res://sprites/mansion/walls-top-left.png" id="21_wljb1"]
 [ext_resource type="Texture2D" uid="uid://bkupqkfnit3e1" path="res://sprites/mansion/walls-top-right.png" id="22_v2yb1"]
@@ -102,39 +101,61 @@ polygon = PackedVector2Array(-31, 2348, 4135, 2348, 4143, -70, -69, -74)
 position = Vector2(2048, 1153)
 
 [node name="WallsBottomLeft" type="Sprite2D" parent="Mansion" unique_id=1305024853]
+visible = false
+y_sort_enabled = true
 texture = ExtResource("11_37s47")
 
 [node name="WallsBottomRight" type="Sprite2D" parent="Mansion" unique_id=270453190]
+visible = false
+y_sort_enabled = true
 texture = ExtResource("12_bt5mj")
 
 [node name="WallsCenterBottom" type="Sprite2D" parent="Mansion" unique_id=1702887140]
+visible = false
+y_sort_enabled = true
 texture = ExtResource("13_e1j6l")
 
-[node name="WallsCenterLeft" type="Sprite2D" parent="Mansion" unique_id=1900736254]
-texture = ExtResource("14_pl11u")
-
 [node name="WallsCenterRight" type="Sprite2D" parent="Mansion" unique_id=1407396356]
+visible = false
+y_sort_enabled = true
 texture = ExtResource("15_bhx41")
 
 [node name="WallsCenterTopLeft" type="Sprite2D" parent="Mansion" unique_id=1152350648]
+y_sort_enabled = true
+position = Vector2(0, -600)
 texture = ExtResource("16_qnb83")
+offset = Vector2(0, 600)
 
 [node name="WallsCenterTopRight" type="Sprite2D" parent="Mansion" unique_id=60268157]
+visible = false
+y_sort_enabled = true
 texture = ExtResource("17_sww3w")
 
 [node name="WallsCenterTop" type="Sprite2D" parent="Mansion" unique_id=1071103798]
+visible = false
+y_sort_enabled = true
 texture = ExtResource("18_suyxu")
 
-[node name="WallsCenter" type="Sprite2D" parent="Mansion" unique_id=1261003488]
-texture = ExtResource("19_sgl2t")
-
 [node name="WallsOutline" type="Sprite2D" parent="Mansion" unique_id=1273451771]
+visible = false
+y_sort_enabled = true
 texture = ExtResource("20_qouja")
 
 [node name="WallsTopLeft" type="Sprite2D" parent="Mansion" unique_id=1860088818]
+visible = false
+y_sort_enabled = true
 texture = ExtResource("21_wljb1")
 
 [node name="WallsTopRight" type="Sprite2D" parent="Mansion" unique_id=1482559831]
+visible = false
+y_sort_enabled = true
 texture = ExtResource("22_v2yb1")
+
+[node name="WallsCenterLeft" type="Sprite2D" parent="Mansion" unique_id=1900736254]
+visible = false
+y_sort_enabled = true
+position = Vector2(0, 850)
+texture = ExtResource("14_pl11u")
+offset = Vector2(0, -850)
 
 [editable path="Exit"]
