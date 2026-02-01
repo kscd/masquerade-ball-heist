@@ -5,10 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="4_dinhu"]
 [ext_resource type="PackedScene" uid="uid://0dt8el4fbxxp" path="res://scenes/screens/hud.tscn" id="5_kvuet"]
 [ext_resource type="Texture2D" uid="uid://sc52d2ue8ugc" path="res://sprites/mansion-reference.png" id="6_trtic"]
-[ext_resource type="PackedScene" uid="uid://d17ncw2rb7hk3" path="res://scenes/spawner.tscn" id="7_ir15t"]
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="7_ir15t"]
 [ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="8_ca42v"]
-[ext_resource type="PackedScene" path="res://scenes/exit.tscn" id="9_rysoc"]
+[ext_resource type="PackedScene" uid="uid://07e6jj7kwoxb" path="res://scenes/exit.tscn" id="9_rysoc"]
 [ext_resource type="Texture2D" uid="uid://cvohb2e50k8eb" path="res://sprites/icon-heart.png" id="10_02fa5"]
+[ext_resource type="PackedScene" uid="uid://dik284hen3lqh" path="res://scenes/collectible/books.tscn" id="10_ms3bu"]
 [ext_resource type="Texture2D" uid="uid://dlxvluvdcxs25" path="res://sprites/mansion/walls-bottom-left.png" id="11_37s47"]
 [ext_resource type="PackedScene" uid="uid://ci0a06vd7pff7" path="res://scenes/obstacle/table.tscn" id="11_dinhu"]
 [ext_resource type="Texture2D" uid="uid://cv583ukfkbnf" path="res://sprites/mansion/walls-bottom-right.png" id="12_bt5mj"]
@@ -36,8 +37,27 @@
 [ext_resource type="PackedScene" uid="uid://c40pjfajvokel" path="res://scenes/collectible/gem.tscn" id="30_wljb1"]
 [ext_resource type="PackedScene" uid="uid://b3jbmlmpv1ig8" path="res://scenes/collectible/necklace.tscn" id="31_v2yb1"]
 [ext_resource type="PackedScene" uid="uid://cb4jygi2b66c8" path="res://scenes/collectible/money_stack1.tscn" id="33_js0lu"]
+[ext_resource type="PackedScene" uid="uid://fycr646wk0d5" path="res://scenes/collectible/sword.tscn" id="36_7ixpq"]
+[ext_resource type="PackedScene" uid="uid://8jsog1v1niey" path="res://scenes/collectible/clock.tscn" id="38_bk1p3"]
+[ext_resource type="PackedScene" uid="uid://byya0x2gij2wx" path="res://scenes/collectible/picture1.tscn" id="39_n8ral"]
+[ext_resource type="PackedScene" uid="uid://ck368id2r21oa" path="res://scenes/obstacle/table2.tscn" id="40_yd4ix"]
+[ext_resource type="PackedScene" uid="uid://bd4fa4x8sc7yw" path="res://scenes/obstacle/fountain.tscn" id="41_66xif"]
+[ext_resource type="PackedScene" uid="uid://cgo1dqjemdwca" path="res://scenes/obstacle/bookshelf.tscn" id="42_bnuda"]
+[ext_resource type="PackedScene" uid="uid://h1fpn6euwl45" path="res://scenes/obstacle/chair2.tscn" id="43_0rmfi"]
+[ext_resource type="PackedScene" uid="uid://ch4654lidd0s8" path="res://scenes/obstacle/books.tscn" id="44_xbak0"]
+[ext_resource type="PackedScene" uid="uid://bxpyfa2gg7epi" path="res://scenes/obstacle/rug.tscn" id="45_3x28f"]
+[ext_resource type="PackedScene" uid="uid://bfxl3om32ty7w" path="res://scenes/obstacle/picture4.tscn" id="46_l6q63"]
+[ext_resource type="PackedScene" uid="uid://cxmm44yg34jv8" path="res://scenes/obstacle/picture3.tscn" id="47_mmvbu"]
+[ext_resource type="PackedScene" uid="uid://bxproiv3bb8k1" path="res://scenes/obstacle/picture2.tscn" id="48_weeiq"]
+[ext_resource type="PackedScene" uid="uid://cfstmdybyost4" path="res://scenes/obstacle/picture5.tscn" id="49_uxocx"]
+[ext_resource type="PackedScene" uid="uid://bpfyy40d2ngdx" path="res://scenes/obstacle/pestal.tscn" id="50_7nv0b"]
+[ext_resource type="PackedScene" uid="uid://dtdior7ejnamp" path="res://scenes/collectible/money_bill.tscn" id="51_o8oq8"]
+[ext_resource type="PackedScene" uid="uid://c46xt8b8g6ks5" path="res://scenes/obstacle/vase4.tscn" id="52_sxt1d"]
+[ext_resource type="PackedScene" uid="uid://bbc4x8h6hbnoh" path="res://scenes/obstacle/vase2.tscn" id="53_2iuns"]
+[ext_resource type="PackedScene" uid="uid://dm5djwpq25rhy" path="res://scenes/obstacle/vase3.tscn" id="54_7gkqi"]
+[ext_resource type="PackedScene" uid="uid://dhx4kvp2n2mhi" path="res://scenes/collectible/vase1.tscn" id="55_753oq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rm0al"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3x338"]
 resource_local_to_scene = true
 size = Vector2(292, 222.31949)
 
@@ -136,7 +156,7 @@ scale = Vector2(2.12, 2.12)
 color = Color(1, 0, 1, 0)
 offset = Vector2(-1166.5098, 567.9246)
 invert_border = 0.1
-polygon = PackedVector2Array(67.92468, 53.30182, 32, 1054, 1899.0568, 1064.1509, 1885, 44)
+polygon = PackedVector2Array(92.453, 92.45276, 92.92468, 1054.2454, 1839.6228, 1055.1887, 1841.9813, 91.5094)
 
 [node name="HUD" parent="." unique_id=925397185 instance=ExtResource("5_kvuet")]
 heart_texture = ExtResource("10_02fa5")
@@ -170,7 +190,7 @@ position = Vector2(2052, 132)
 [node name="CollisionShape2D" parent="Exit" index="0" unique_id=1702538791]
 position = Vector2(-14, 10.5)
 scale = Vector2(1, 1.003061)
-shape = SubResource("RectangleShape2D_rm0al")
+shape = SubResource("RectangleShape2D_3x338")
 
 [node name="BlackOverlay" type="Polygon2D" parent="." unique_id=902701172]
 visible = false
@@ -309,6 +329,10 @@ shape = SubResource("RectangleShape2D_458eo")
 position = Vector2(532.4334, 646.47284)
 rotation = 1.5683053
 shape = SubResource("RectangleShape2D_h3rex")
+
+[node name="Collectible" parent="Mansion/WallCollider" unique_id=1076301399 instance=ExtResource("10_ms3bu")]
+position = Vector2(1323.4741, 678.87317)
+scale = Vector2(0.5, 0.5)
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=805980395]
 position = Vector2(1501.6462, 77.26238)
@@ -529,11 +553,80 @@ position = Vector2(3211, 711)
 [node name="Collectible6" parent="." unique_id=1941014537 instance=ExtResource("30_wljb1")]
 position = Vector2(3761, 369)
 
+[node name="Collectible9" parent="." unique_id=263454028 instance=ExtResource("36_7ixpq")]
+position = Vector2(232, 1953)
+
 [node name="Collectible4" parent="." unique_id=1302061636 instance=ExtResource("33_js0lu")]
 position = Vector2(577, 1059)
 
 [node name="Collectible7" parent="." unique_id=1834759528 instance=ExtResource("30_wljb1")]
 position = Vector2(3243, 1259)
+
+[node name="Collectible" parent="." unique_id=1100396438 instance=ExtResource("38_bk1p3")]
+position = Vector2(3362, 727)
+
+[node name="Collectible12" parent="." unique_id=604587042 instance=ExtResource("39_n8ral")]
+position = Vector2(229, 141)
+
+[node name="Obstacle" parent="." unique_id=1070146420 instance=ExtResource("40_yd4ix")]
+position = Vector2(214, 1990)
+
+[node name="Obstacle27" parent="." unique_id=858675113 instance=ExtResource("41_66xif")]
+position = Vector2(1450, 1194)
+
+[node name="Obstacle18" parent="." unique_id=445646301 instance=ExtResource("42_bnuda")]
+position = Vector2(2863, 1491)
+
+[node name="Obstacle26" parent="." unique_id=1020517068 instance=ExtResource("43_0rmfi")]
+position = Vector2(3554, 2187)
+
+[node name="Obstacle19" parent="." unique_id=1042052107 instance=ExtResource("44_xbak0")]
+position = Vector2(2849, 1535)
+
+[node name="Obstacle25" parent="." unique_id=1642726994 instance=ExtResource("45_3x28f")]
+position = Vector2(3594, 1518)
+
+[node name="Obstacle20" parent="." unique_id=1269404847 instance=ExtResource("44_xbak0")]
+position = Vector2(2854, 1193)
+
+[node name="Obstacle31" parent="." unique_id=1647510636 instance=ExtResource("46_l6q63")]
+z_index = 0
+position = Vector2(2478, 136)
+
+[node name="Obstacle30" parent="." unique_id=49406101 instance=ExtResource("47_mmvbu")]
+z_index = 0
+position = Vector2(358, 141)
+
+[node name="Obstacle29" parent="." unique_id=549286849 instance=ExtResource("48_weeiq")]
+z_index = 0
+position = Vector2(987, 142)
+
+[node name="Obstacle32" parent="." unique_id=284102856 instance=ExtResource("49_uxocx")]
+z_index = 0
+position = Vector2(3561, 130)
+
+[node name="Obstacle21" parent="." unique_id=2112698357 instance=ExtResource("50_7nv0b")]
+position = Vector2(1274, 1568)
+
+[node name="Obstacle17" parent="." unique_id=2013616790 instance=ExtResource("42_bnuda")]
+position = Vector2(2868, 1153)
+
+[node name="Collectible10" parent="." unique_id=2003947684 instance=ExtResource("51_o8oq8")]
+position = Vector2(2822, 1118)
+rotation = 1.5707964
+
+[node name="Obstacle24" parent="." unique_id=779052847 instance=ExtResource("52_sxt1d")]
+position = Vector2(2304, 1463)
+
+[node name="Obstacle22" parent="." unique_id=1254249721 instance=ExtResource("53_2iuns")]
+position = Vector2(2856, 1881)
+
+[node name="Obstacle23" parent="." unique_id=53129840 instance=ExtResource("54_7gkqi")]
+position = Vector2(1010, 1483)
+
+[node name="Collectible11" parent="." unique_id=687261210 instance=ExtResource("55_753oq")]
+position = Vector2(1275, 1543)
+scale = Vector2(0.5, 0.5)
 
 [node name="Collectible8" parent="." unique_id=579167624 instance=ExtResource("31_v2yb1")]
 position = Vector2(3089, 1792)
