@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dq2va1umvclk5"]
+
+[ext_resource type="Script" uid="uid://btidqgoh41y1n" path="res://scripts/score_bar.gd" id="1_ihbxb"]
+
+[node name="State" type="Node2D" unique_id=362457625]
+script = ExtResource("1_ihbxb")
