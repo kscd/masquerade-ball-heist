@@ -22,14 +22,18 @@
 [ext_resource type="Texture2D" uid="uid://coxo7eu6m0ii4" path="res://sprites/mansion/walls-top-left.png" id="21_wljb1"]
 [ext_resource type="Texture2D" uid="uid://bkupqkfnit3e1" path="res://sprites/mansion/walls-top-right.png" id="22_v2yb1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_js0lu"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5newe"]
 resource_local_to_scene = true
 size = Vector2(292, 222.31949)
 
 [node name="Game" type="Node2D" unique_id=172343982]
+z_as_relative = false
+y_sort_enabled = true
 script = ExtResource("1_vtaks")
 
 [node name="Player" parent="." unique_id=637585576 groups=["player"] instance=ExtResource("1_0tnpc")]
+z_as_relative = false
+y_sort_enabled = true
 position = Vector2(750, 433)
 collision_layer = 3
 
@@ -55,7 +59,8 @@ offset = Vector2(1169, 1989)
 spawn_count = 200
 spawn_poly = NodePath("../SpawnPolygon2D")
 
-[node name="CrowdManager" parent="." unique_id=61583125 instance=ExtResource("8_ca42v")]
+[node name="CrowdManager" parent="." unique_id=61583125 node_paths=PackedStringArray("player") instance=ExtResource("8_ca42v")]
+player = NodePath("../Player")
 
 [node name="SpawnPolygon2D" type="Polygon2D" parent="." unique_id=838033360]
 position = Vector2(2473.0002, -1204)
@@ -90,7 +95,7 @@ position = Vector2(2052, 132)
 [node name="CollisionShape2D" parent="Exit" index="0" unique_id=1702538791]
 position = Vector2(-14, 10.5)
 scale = Vector2(1, 1.003061)
-shape = SubResource("RectangleShape2D_js0lu")
+shape = SubResource("RectangleShape2D_5newe")
 
 [node name="BlackOverlay" type="Polygon2D" parent="." unique_id=902701172]
 visible = false
@@ -98,64 +103,71 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-31, 2348, 4135, 2348, 4143, -70, -69, -74)
 
 [node name="Mansion" type="Node2D" parent="." unique_id=326218612]
+z_as_relative = false
+y_sort_enabled = true
 position = Vector2(2048, 1153)
 
 [node name="WallsBottomLeft" type="Sprite2D" parent="Mansion" unique_id=1305024853]
-visible = false
+z_as_relative = false
 y_sort_enabled = true
 texture = ExtResource("11_37s47")
 
 [node name="WallsBottomRight" type="Sprite2D" parent="Mansion" unique_id=270453190]
-visible = false
+z_as_relative = false
 y_sort_enabled = true
 texture = ExtResource("12_bt5mj")
 
 [node name="WallsCenterBottom" type="Sprite2D" parent="Mansion" unique_id=1702887140]
-visible = false
+z_as_relative = false
 y_sort_enabled = true
 texture = ExtResource("13_e1j6l")
 
 [node name="WallsCenterRight" type="Sprite2D" parent="Mansion" unique_id=1407396356]
-visible = false
+z_as_relative = false
 y_sort_enabled = true
+position = Vector2(936.75, 885.97)
 texture = ExtResource("15_bhx41")
+offset = Vector2(-936.75, -885.97)
 
 [node name="WallsCenterTopLeft" type="Sprite2D" parent="Mansion" unique_id=1152350648]
+z_as_relative = false
 y_sort_enabled = true
-position = Vector2(0, -600)
+position = Vector2(-912.065, -580.535)
 texture = ExtResource("16_qnb83")
-offset = Vector2(0, 600)
+offset = Vector2(912.065, 580.535)
 
 [node name="WallsCenterTopRight" type="Sprite2D" parent="Mansion" unique_id=60268157]
-visible = false
+z_as_relative = false
 y_sort_enabled = true
+position = Vector2(912.065, -580.535)
 texture = ExtResource("17_sww3w")
+offset = Vector2(-912.065, 580.535)
 
 [node name="WallsCenterTop" type="Sprite2D" parent="Mansion" unique_id=1071103798]
-visible = false
+z_as_relative = false
 y_sort_enabled = true
 texture = ExtResource("18_suyxu")
 
 [node name="WallsOutline" type="Sprite2D" parent="Mansion" unique_id=1273451771]
-visible = false
-y_sort_enabled = true
+z_index = 2
+z_as_relative = false
 texture = ExtResource("20_qouja")
 
 [node name="WallsTopLeft" type="Sprite2D" parent="Mansion" unique_id=1860088818]
-visible = false
+z_as_relative = false
 y_sort_enabled = true
 texture = ExtResource("21_wljb1")
 
 [node name="WallsTopRight" type="Sprite2D" parent="Mansion" unique_id=1482559831]
-visible = false
+z_as_relative = false
 y_sort_enabled = true
 texture = ExtResource("22_v2yb1")
 
 [node name="WallsCenterLeft" type="Sprite2D" parent="Mansion" unique_id=1900736254]
-visible = false
+z_as_relative = false
 y_sort_enabled = true
-position = Vector2(0, 850)
+position = Vector2(-936.75, 877.82)
 texture = ExtResource("14_pl11u")
-offset = Vector2(0, -850)
+offset = Vector2(936.75, -877.82)
 
 [editable path="Exit"]
