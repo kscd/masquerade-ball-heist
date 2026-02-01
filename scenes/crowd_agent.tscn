@@ -9,7 +9,14 @@ radius = 14.0
 height = 68.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=737167328]
+collision_layer = 4
 script = ExtResource("1_ptrki")
+max_sight = 1000.0
+repick_interval = 5.0
+idle_chance_per_second = 0.2
+push_radius = 100.0
+max_side_push = 200000.0
+max_total_push = 40000.0
 
 [node name="MovementController" type="Node" parent="." unique_id=1560737005]
 unique_name_in_owner = true

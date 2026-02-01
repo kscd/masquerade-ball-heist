@@ -2,14 +2,8 @@
 extends CharacterBody2D
 class_name CrowdAgent
 
-@export var cruise_speed: float = 120.0      # px/s (uniform for everyone)
-@export var accel: float = 600.0             # px/s^2
-@export var decel: float = 900.0             # px/s^2
-@export var max_turn_rate_deg: float = 360.0 # deg/s
-
 @export var max_sight: float = 600.0         # px
 @export var sample_count: int = 10           # 8–12
-@export var cone_deg: float = 140.0
 @export var repick_interval: float = 3.0     # seconds, staggered
 @export var reach_dist: float = 16.0         # px
 
@@ -27,11 +21,11 @@ class_name CrowdAgent
 @export var dir_noise_deg: float = 10.0      # randomness in direction decision (degrees)
 @export var switch_hysteresis: float = 0.15  # 0..1: higher = less switching
 
-@export var push_radius: float = 28.0
-@export var max_side_push: float = 180.0
+@export var push_radius: float = 150.0
+@export var max_side_push: float = 100180.0
 @export var push_forward_ratio: float = 0.20
 @export var push_falloff_exp: float = 1.5
-@export var max_total_push: float = 260.0
+@export var max_total_push: float = 26000.0
 
 @export var obstacle_mask: int = 1           # collision mask bits for walls
 
@@ -65,6 +59,7 @@ func physics_step(dt: float) -> void:
 	# Always compute push (even while idling)
 	var push_vec := _compute_total_push_vector()
 	if push_vec.length_squared() > 0.0001:
+		print( "applied push ", push_vec.length(), "to ", name  )
 		%MovementController.push_direction = push_vec.normalized()
 		%MovementController.push_force = push_vec.length()
 	else:

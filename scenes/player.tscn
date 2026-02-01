@@ -8,6 +8,7 @@
 height = 72.0
 
 [node name="Player" type="CharacterBody2D" unique_id=637585576 groups=["player"]]
+collision_layer = 6
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1395806930]
