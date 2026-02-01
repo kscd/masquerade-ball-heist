@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="4_dinhu"]
 [ext_resource type="PackedScene" uid="uid://0dt8el4fbxxp" path="res://scenes/screens/hud.tscn" id="5_kvuet"]
 [ext_resource type="Texture2D" uid="uid://sc52d2ue8ugc" path="res://sprites/mansion-reference.png" id="6_trtic"]
-[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="7_ir15t"]
+[ext_resource type="PackedScene" uid="uid://d17ncw2rb7hk3" path="res://scenes/spawner.tscn" id="7_ir15t"]
 [ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="8_ca42v"]
-[ext_resource type="PackedScene" uid="uid://07e6jj7kwoxb" path="res://scenes/exit.tscn" id="9_rysoc"]
+[ext_resource type="PackedScene" path="res://scenes/exit.tscn" id="9_rysoc"]
 [ext_resource type="Texture2D" uid="uid://cvohb2e50k8eb" path="res://sprites/icon-heart.png" id="10_02fa5"]
 [ext_resource type="PackedScene" uid="uid://dik284hen3lqh" path="res://scenes/collectible/books.tscn" id="10_ms3bu"]
 [ext_resource type="Texture2D" uid="uid://dlxvluvdcxs25" path="res://sprites/mansion/walls-bottom-left.png" id="11_37s47"]
@@ -57,7 +57,7 @@
 [ext_resource type="PackedScene" uid="uid://dm5djwpq25rhy" path="res://scenes/obstacle/vase3.tscn" id="54_7gkqi"]
 [ext_resource type="PackedScene" uid="uid://dhx4kvp2n2mhi" path="res://scenes/collectible/vase1.tscn" id="55_753oq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3x338"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ms3bu"]
 resource_local_to_scene = true
 size = Vector2(292, 222.31949)
 
@@ -137,7 +137,6 @@ mgr = NodePath("../CrowdManager")
 [node name="Seeker" parent="." unique_id=1225841198 instance=ExtResource("4_dinhu")]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1380014506]
-visible = false
 position = Vector2(879, -837)
 texture = ExtResource("6_trtic")
 offset = Vector2(1169, 1989)
@@ -172,13 +171,22 @@ position = Vector2(28.169014, 29.577463)
 polygon = PackedVector2Array(9.859152, 1092.9576, 15.962439, -34.2723, -189, -203, -146, 1270)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="ColliderOutside" unique_id=1957333635]
-polygon = PackedVector2Array(1875.5868, 32.394363, 8.450704, 32.394363, -220, -232, 2182.1597, -252.11267)
+polygon = PackedVector2Array(1911.737, 73.23943, 26.760563, 73.23943, -220, -232, 2182.1597, -252.11267)
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="ColliderOutside" unique_id=1916720417]
 polygon = PackedVector2Array(2111, 1284, 1918, 1087, 1907.9812, 421.12674, 2156, -248)
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="ColliderOutside" unique_id=1212385040]
 polygon = PackedVector2Array(2105.1643, 436.1502, 1874.1783, 416.9014, 1875.5868, 30.985914, 2162.9106, -292.01877)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="ColliderOutside" unique_id=1605468344]
+polygon = PackedVector2Array(914.55396, 139.9061, 860.56335, 137.55869, 746.4789, 32.86385, 909.38965, -14.55399)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="ColliderOutside" unique_id=543027869]
+position = Vector2(1918.3099, -5.164319)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(914.55396, 139.9061, 860.56335, 137.55869, 746.4789, 32.86385, 909.38965, -14.55399)
 
 [node name="Background2" type="Polygon2D" parent="." unique_id=824731701]
 z_index = -100
@@ -188,9 +196,9 @@ polygon = PackedVector2Array(-31, 2348, 4135, 2348, 4143, -70, -69, -74)
 position = Vector2(2052, 132)
 
 [node name="CollisionShape2D" parent="Exit" index="0" unique_id=1702538791]
-position = Vector2(-14, 10.5)
+position = Vector2(2, 13)
 scale = Vector2(1, 1.003061)
-shape = SubResource("RectangleShape2D_3x338")
+shape = SubResource("RectangleShape2D_ms3bu")
 
 [node name="BlackOverlay" type="Polygon2D" parent="." unique_id=902701172]
 visible = false

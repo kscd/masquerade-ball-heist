@@ -53,8 +53,11 @@ func switch_to_controls():
 		get_tree().change_scene_to_file("res://scenes/control_overview_round_2/control_overview.tscn")
 	
 func switch_to_round_over(condition: Round_end_condition):
+	if condition == Round_end_condition.SEEKER_NO_LIVES:
+		round_score += 10000
+			
 	GameEvents.round_over.emit(condition)
-	if condition == Round_end_condition.THIEF_FLED or condition == Round_end_condition.SEEKER_NO_LIVES:
+	if condition == Round_end_condition.THIEF_FLED:
 		if is_first_player_turn:
 			player_score_0 += round_score
 		else:
