@@ -394,6 +394,22 @@ texture = ExtResource("23_wljb1")
 [node name="BalconyStaris" type="Sprite2D" parent="Mansion/BalconySprites" unique_id=1189705158]
 texture = ExtResource("24_v2yb1")
 
+[node name="BalconyCollider" type="StaticBody2D" parent="Mansion" unique_id=572794227]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mansion/BalconyCollider" unique_id=1482872396]
+polygon = PackedVector2Array(-654, 808, -642, 704, -593, 588, -501, 474, -409, 415, -286, 375, -216, 365, -176, 117, -153, 121, -191, 386, -286, 394, -398, 437, -489, 495, -573, 594, -621, 708, -639, 837, -939, 840, -936, 809)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Mansion/BalconyCollider" unique_id=483386617]
+polygon = PackedVector2Array(-405, 824, -385, 752, -332, 671, -260, 632, -197, 621, 5, 623, 2, 650, -189, 651, -252, 658, -314, 696, -362, 760, -377, 832)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Mansion/BalconyCollider" unique_id=1858636598]
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(-654, 808, -642, 704, -593, 588, -501, 474, -409, 415, -286, 375, -216, 365, -176, 117, -153, 121, -191, 386, -286, 394, -398, 437, -489, 495, -573, 594, -621, 708, -639, 837, -939, 840, -936, 809)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Mansion/BalconyCollider" unique_id=1655255383]
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(-405, 824, -385, 752, -332, 671, -260, 632, -197, 621, 5, 623, 2, 650, -189, 651, -252, 658, -314, 696, -362, 760, -377, 832)
+
 [node name="Obstacle2" parent="." unique_id=436183618 instance=ExtResource("11_dinhu")]
 position = Vector2(640, 1203)
 
