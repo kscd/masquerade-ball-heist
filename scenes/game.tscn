@@ -46,7 +46,7 @@ size = Vector2(681.2066, 14.697885)
 size = Vector2(332.3728, 16.707848)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wljb1"]
-size = Vector2(502.33667, 28.072247)
+size = Vector2(502.33667, 44.600945)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2yb1"]
 size = Vector2(204.34001, 16.707848)
@@ -97,7 +97,7 @@ size = Vector2(572.73755, 15.879459)
 size = Vector2(754.42395, 24.026545)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8qswn"]
-size = Vector2(483.94894, 40.44162)
+size = Vector2(483.94894, 63.0699)
 
 [node name="Game" type="Node2D" unique_id=172343982]
 z_as_relative = false
@@ -199,7 +199,7 @@ rotation = 1.5731338
 shape = SubResource("RectangleShape2D_qouja")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=1318454365]
-position = Vector2(286.8598, 752.0643)
+position = Vector2(286.8598, 760.3286)
 rotation = -3.1415925
 shape = SubResource("RectangleShape2D_wljb1")
 
@@ -313,7 +313,7 @@ rotation = -3.1403239
 shape = SubResource("RectangleShape2D_fedci")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=1094565877]
-position = Vector2(1637.7234, 444.94092)
+position = Vector2(1637.7091, 456.2551)
 rotation = -3.1403239
 shape = SubResource("RectangleShape2D_8qswn")
 
