@@ -8,6 +8,7 @@
 [ext_resource type="StyleBox" uid="uid://bvqptd3tfk13j" path="res://shared/new_style_box_flat.tres" id="5_51s6d"]
 [ext_resource type="Script" uid="uid://cr7m2ygyv1d64" path="res://scenes/control_overview_round_2/panel.gd" id="6_t03s0"]
 [ext_resource type="Script" uid="uid://cjasbxyggdb35" path="res://scenes/control_overview_round_2/v_box_container.gd" id="7_tek2h"]
+[ext_resource type="Script" uid="uid://50qfwiau62ug" path="res://scenes/control_overview_round_2/start_button.gd" id="9_qyaew"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=667254874]
 
@@ -175,8 +176,11 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Begin heist!"
+script = ExtResource("9_qyaew")
 
 [node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerMenu" unique_id=632219561]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Back"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerMenu/StartButton" to="MarginContainer/VBoxContainer/HBoxContainerMenu/StartButton" method="_on_pressed"]
