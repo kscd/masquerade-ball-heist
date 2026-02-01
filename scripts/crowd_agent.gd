@@ -59,7 +59,6 @@ func physics_step(dt: float) -> void:
 	# Always compute push (even while idling)
 	var push_vec := _compute_total_push_vector()
 	if push_vec.length_squared() > 0.0001:
-		print( "applied push ", push_vec.length(), "to ", name  )
 		%MovementController.push_direction = push_vec.normalized()
 		%MovementController.push_force = push_vec.length()
 	else:
