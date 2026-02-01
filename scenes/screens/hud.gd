@@ -30,7 +30,7 @@ func show_lives(new_lives_count: int):
 		var lost_heart = hearts[new_lives_count]
 		tween.tween_property(lost_heart, "modulate:a", 0.2, 0.1)
 	
-	tween.tween_interval(0.4)
+	tween.tween_interval(1.0)
 	
 	tween.tween_property($LivesContainer, "modulate:a", 0.0, 0.5)
 

@@ -10,8 +10,8 @@ var is_first_player_turn
 var round_score
 var player_score_0
 var player_score_1
-const winning_score = 1000
-const max_lives = 10
+const winning_score = 100000
+const max_lives = 5
 var current_lives
 
 func resetState():

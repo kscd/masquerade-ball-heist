@@ -2,14 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://c30c6v3tnaph1" path="res://scenes/player.tscn" id="1_0tnpc"]
 [ext_resource type="Script" uid="uid://dsmhgnyq1ks6f" path="res://scripts/game.gd" id="1_vtaks"]
-[ext_resource type="PackedScene" uid="uid://bhtx7d8nan6qt" path="res://scenes/collectible/collectible_sample.tscn" id="2_vtaks"]
-[ext_resource type="PackedScene" uid="uid://bxlyvl12pgcvr" path="res://scenes/obstacle/obstacle.tscn" id="3_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="4_dinhu"]
 [ext_resource type="PackedScene" uid="uid://0dt8el4fbxxp" path="res://scenes/screens/hud.tscn" id="5_kvuet"]
 [ext_resource type="Texture2D" uid="uid://sc52d2ue8ugc" path="res://sprites/mansion-reference.png" id="6_trtic"]
 [ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="7_ir15t"]
 [ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="8_ca42v"]
 [ext_resource type="PackedScene" uid="uid://07e6jj7kwoxb" path="res://scenes/exit.tscn" id="9_rysoc"]
+[ext_resource type="Texture2D" uid="uid://cvohb2e50k8eb" path="res://sprites/icon-heart.png" id="10_02fa5"]
 [ext_resource type="Texture2D" uid="uid://dlxvluvdcxs25" path="res://sprites/mansion/walls-bottom-left.png" id="11_37s47"]
 [ext_resource type="PackedScene" uid="uid://ci0a06vd7pff7" path="res://scenes/obstacle/table.tscn" id="11_dinhu"]
 [ext_resource type="Texture2D" uid="uid://cv583ukfkbnf" path="res://sprites/mansion/walls-bottom-right.png" id="12_bt5mj"]
@@ -114,17 +113,7 @@ position = Vector2(750, 433)
 collision_layer = 3
 mgr = NodePath("../CrowdManager")
 
-[node name="Collectible" parent="." unique_id=1076301399 instance=ExtResource("2_vtaks")]
-position = Vector2(468, 435)
-collision_layer = 1
-collision_mask = 1
-
-[node name="Obstacle" parent="." unique_id=1070146420 instance=ExtResource("3_kvpfn")]
-position = Vector2(1241, 410)
-
 [node name="Seeker" parent="." unique_id=1225841198 instance=ExtResource("4_dinhu")]
-
-[node name="HUD" parent="." unique_id=925397185 instance=ExtResource("5_kvuet")]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1380014506]
 position = Vector2(879, -837)
@@ -132,7 +121,7 @@ texture = ExtResource("6_trtic")
 offset = Vector2(1169, 1989)
 
 [node name="Spawner" parent="." unique_id=1610160643 node_paths=PackedStringArray("spawn_poly") instance=ExtResource("7_ir15t")]
-spawn_count = 200
+spawn_count = 100
 spawn_poly = NodePath("../SpawnPolygon2D")
 
 [node name="CrowdManager" parent="." unique_id=61583125 node_paths=PackedStringArray("player") instance=ExtResource("8_ca42v")]
@@ -146,6 +135,9 @@ color = Color(1, 0, 1, 0)
 offset = Vector2(-1166.5098, 567.9246)
 invert_border = 0.1
 polygon = PackedVector2Array(67.92468, 53.30182, 32, 1054, 1899.0568, 1064.1509, 1885, 44)
+
+[node name="HUD" parent="." unique_id=925397185 instance=ExtResource("5_kvuet")]
+heart_texture = ExtResource("10_02fa5")
 
 [node name="ColliderOutside" type="StaticBody2D" parent="." unique_id=1320844649]
 scale = Vector2(2.13, 2.13)
@@ -166,6 +158,10 @@ polygon = PackedVector2Array(2111, 1284, 1918, 1087, 1907.9812, 421.12674, 2156,
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="ColliderOutside" unique_id=1212385040]
 polygon = PackedVector2Array(2105.1643, 436.1502, 1874.1783, 416.9014, 1875.5868, 30.985914, 2162.9106, -292.01877)
 
+[node name="Background2" type="Polygon2D" parent="." unique_id=824731701]
+z_index = -100
+polygon = PackedVector2Array(-31, 2348, 4135, 2348, 4143, -70, -69, -74)
+
 [node name="Exit" parent="." unique_id=1118414250 instance=ExtResource("9_rysoc")]
 position = Vector2(2052, 132)
 
@@ -175,7 +171,7 @@ scale = Vector2(1, 1.003061)
 shape = SubResource("RectangleShape2D_rm0al")
 
 [node name="BlackOverlay" type="Polygon2D" parent="." unique_id=902701172]
-visible = false
+z_index = 3
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-31, 2348, 4135, 2348, 4143, -70, -69, -74)
 

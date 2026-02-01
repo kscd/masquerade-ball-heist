@@ -4,8 +4,7 @@ extends Node2D
 @onready var overlay = $BlackOverlay
 
 func _ready() -> void:
-	pass
-	# start_intro_sequence()
+	start_intro_sequence()
 
 func start_intro_sequence():
 	# 1. Prepare the stage

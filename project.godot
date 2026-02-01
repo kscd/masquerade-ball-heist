@@ -25,6 +25,7 @@ GameState="*uid://bd0w0dxn3nd5s"
 window/size/viewport_width=4096
 window/size/viewport_height=2304
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="uid://d34ilkoevibnt"
 
 [global_group]
 
