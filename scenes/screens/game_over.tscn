@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://ckbn2or4at7b3" path="res://scenes/screens/game_over.gd" id="1_7xe70"]
 [ext_resource type="LabelSettings" uid="uid://dhqfy6pohtndf" path="res://shared/player_label_settings.tres" id="1_f7a6i"]
-[ext_resource type="LabelSettings" uid="uid://6hkdaf5umo4l" path="res://shared/countdown_menu_label.tres" id="2_7xe70"]
+[ext_resource type="LabelSettings" uid="uid://br33vnfar1uca" path="res://shared/main_menu_label.tres" id="3_7xe70"]
+[ext_resource type="LabelSettings" uid="uid://d2vdsnjdklwpn" path="res://shared/credits_menu_label.tres" id="4_ify0j"]
 
 [node name="GameOver" type="Control" unique_id=105048524]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_7xe70")
@@ -24,13 +26,20 @@ mouse_filter = 2
 
 [node name="MessageLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=515744043]
 layout_mode = 2
-text = "asdferdfas"
-label_settings = ExtResource("1_f7a6i")
+text = "A fortune was stolen."
+label_settings = ExtResource("3_7xe70")
 
 [node name="ScorePlayer1Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1996570592]
 layout_mode = 2
-label_settings = ExtResource("2_7xe70")
+text = "Player 1: 1000000 $"
+label_settings = ExtResource("1_f7a6i")
 
 [node name="ScorePlayer2Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1432076370]
 layout_mode = 2
-label_settings = ExtResource("2_7xe70")
+text = "Player 2: 1000000 $"
+label_settings = ExtResource("3_7xe70")
+
+[node name="continue" type="Label" parent="CenterContainer/VBoxContainer" unique_id=74295997]
+layout_mode = 2
+text = "~ Press any key to restart ~"
+label_settings = ExtResource("4_ify0j")

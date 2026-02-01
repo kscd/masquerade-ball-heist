@@ -25,7 +25,6 @@ func _on_trigger_screen(condition: Player.Round_end_condition):
 	
 	await get_tree().create_timer(0.5).timeout
 	can_continue = true
-	print(can_continue)
 
 func _input(event):
 	if can_continue and (event is InputEventKey or event is InputEventMouseButton):
@@ -33,4 +32,5 @@ func _input(event):
 			continue_game()
 
 func continue_game():
+	hide()
 	GameState.nextRound()

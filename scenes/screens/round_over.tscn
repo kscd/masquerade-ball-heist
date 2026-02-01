@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://h3ijtmf8nbfy" path="res://scenes/screens/round_over.gd" id="1_apvsg"]
 [ext_resource type="LabelSettings" uid="uid://6hkdaf5umo4l" path="res://shared/countdown_menu_label.tres" id="2_6qemi"]
 [ext_resource type="LabelSettings" uid="uid://dhqfy6pohtndf" path="res://shared/player_label_settings.tres" id="2_tjyb7"]
+[ext_resource type="LabelSettings" uid="uid://d2vdsnjdklwpn" path="res://shared/credits_menu_label.tres" id="4_v5wpo"]
 
 [node name="RoundOver" type="Control" unique_id=276531622]
 process_mode = 3
@@ -30,10 +31,15 @@ mouse_filter = 2
 
 [node name="MessageLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1856500911]
 layout_mode = 2
-text = "asdferdfas"
+text = "The thief stole:"
 label_settings = ExtResource("2_tjyb7")
 
 [node name="ScoreLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2118796631]
 layout_mode = 2
-text = "teststes test test st set s e "
+text = "10000 $"
 label_settings = ExtResource("2_6qemi")
+
+[node name="continue" type="Label" parent="CenterContainer/VBoxContainer" unique_id=388061706]
+layout_mode = 2
+text = "~ Press any key to continue ~"
+label_settings = ExtResource("4_v5wpo")

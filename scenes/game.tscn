@@ -29,7 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://coxo7eu6m0ii4" path="res://sprites/mansion/walls-top-left.png" id="21_wljb1"]
 [ext_resource type="Texture2D" uid="uid://bkupqkfnit3e1" path="res://sprites/mansion/walls-top-right.png" id="22_v2yb1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sww3w"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37s47"]
 resource_local_to_scene = true
 size = Vector2(292, 222.31949)
 
@@ -101,7 +101,7 @@ position = Vector2(2052, 132)
 [node name="CollisionShape2D" parent="Exit" index="0" unique_id=1702538791]
 position = Vector2(-14, 10.5)
 scale = Vector2(1, 1.003061)
-shape = SubResource("RectangleShape2D_sww3w")
+shape = SubResource("RectangleShape2D_37s47")
 
 [node name="BlackOverlay" type="Polygon2D" parent="." unique_id=902701172]
 visible = false

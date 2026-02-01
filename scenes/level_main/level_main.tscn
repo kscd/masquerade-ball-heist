@@ -4,9 +4,10 @@
 [ext_resource type="LabelSettings" uid="uid://br33vnfar1uca" path="res://shared/main_menu_label.tres" id="3_jku0o"]
 [ext_resource type="LabelSettings" uid="uid://6hkdaf5umo4l" path="res://shared/countdown_menu_label.tres" id="4_h7g30"]
 [ext_resource type="PackedScene" uid="uid://cjt5kbbu0p3k3" path="res://scenes/screens/round_over.tscn" id="5_fbhgu"]
+[ext_resource type="PackedScene" uid="uid://jbwyno64l1ml" path="res://scenes/screens/game_over.tscn" id="6_enupx"]
 [ext_resource type="PackedScene" uid="uid://dt77m0c81f1n2" path="res://scenes/game.tscn" id="6_q5k7n"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbhgu"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5k7n"]
 resource_local_to_scene = true
 size = Vector2(550, 189.4202)
 
@@ -22,7 +23,7 @@ z_as_relative = false
 z_as_relative = false
 
 [node name="CollisionShape2D" parent="Game/Exit" parent_id_path=PackedInt32Array(172343982, 1118414250) index="0" unique_id=1702538791]
-shape = SubResource("RectangleShape2D_fbhgu")
+shape = SubResource("RectangleShape2D_q5k7n")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1246356014]
 
@@ -70,6 +71,15 @@ vertical_alignment = 1
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=739974004]
 
 [node name="RoundOver" parent="CanvasLayer2" unique_id=276531622 instance=ExtResource("5_fbhgu")]
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=955726351]
+
+[node name="GameOver" parent="CanvasLayer3" unique_id=105048524 instance=ExtResource("6_enupx")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [editable path="Game"]
 [editable path="Game/Exit"]

@@ -10,7 +10,7 @@ var is_first_player_turn
 var round_score
 var player_score_0
 var player_score_1
-const winning_score = 25000
+const winning_score = 1000
 const max_lives = 10
 var current_lives
 
@@ -29,6 +29,12 @@ func nextRound():
 	round_score = 0
 	current_lives = max_lives
 	get_tree().paused = false
+	get_tree().reload_current_scene()
+	
+func restartGame():
+	print("restart")
+	resetState()
+	switch_to_menu()
 	get_tree().reload_current_scene()
 	
 func switch_to_level():
