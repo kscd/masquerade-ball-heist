@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bd4fa4x8sc7yw"]
+
+[ext_resource type="Texture2D" uid="uid://byddve5eqgvir" path="res://sprites/mansion/fountain-01.png" id="1_3gbvf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qiguw"]
+radius = 138.00362
+
+[node name="Obstacle" type="StaticBody2D" unique_id=1070146420]
+z_index = -64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1471676894]
+shape = SubResource("CircleShape2D_qiguw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=613815491]
+texture = ExtResource("1_3gbvf")

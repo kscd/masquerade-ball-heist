@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://h1fpn6euwl45"]
+
+[ext_resource type="Texture2D" uid="uid://buipkuicb42l2" path="res://sprites/mansion/chair-02.png" id="1_npp2d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ys07"]
+size = Vector2(75, 65)
+
+[node name="Obstacle" type="StaticBody2D" unique_id=1070146420]
+z_index = -64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1471676894]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_1ys07")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=613815491]
+texture = ExtResource("1_npp2d")

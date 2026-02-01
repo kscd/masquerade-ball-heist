@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ck368id2r21oa"]
+
+[ext_resource type="Texture2D" uid="uid://cmxm84eifq7ii" path="res://sprites/mansion/table-02.png" id="1_xhg0c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xhg0c"]
+radius = 58.00862
+
+[node name="Obstacle" type="StaticBody2D" unique_id=1070146420]
+z_index = -64
+position = Vector2(-19, 31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1471676894]
+position = Vector2(19, -30)
+shape = SubResource("CircleShape2D_xhg0c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=613815491]
+position = Vector2(19, -31)
+texture = ExtResource("1_xhg0c")

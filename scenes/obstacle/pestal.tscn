@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bpfyy40d2ngdx"]
+
+[ext_resource type="Texture2D" uid="uid://c8n5fi3vu3hc0" path="res://sprites/mansion/pedastol-01.png" id="1_10nok"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ys07"]
+size = Vector2(34, 48)
+
+[node name="Obstacle" type="StaticBody2D" unique_id=1070146420]
+z_index = -64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1471676894]
+shape = SubResource("RectangleShape2D_1ys07")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=613815491]
+texture = ExtResource("1_10nok")
