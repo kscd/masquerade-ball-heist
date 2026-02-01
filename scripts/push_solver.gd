@@ -43,7 +43,7 @@ static func compute_push_on_a(
 
 	# 2) Intent: is B moving toward A?
 	# Use B's movement direction vs the vector toward A (which is -n from B's perspective)
-	var toward := maxf(0.0, (-n).dot(db))  # 0..1
+	var toward := maxf(0.0, n.dot(db))
 
 	# If B isn't heading into A, no push (prevents "magnetic" pushing)
 	if toward <= 0.0:
@@ -68,3 +68,35 @@ static func compute_push_on_a(
 	# Final strength
 	var strength := max_push * proximity * toward * speed_factor
 	return push_dir * strength
+	
+static func _compute_total_push_vector(_mgr: CrowdManager, bodyA: CharacterBody2D,	radius: float, max_push: float, falloff_exp: float = 1.5, side_bias: float = 0.65,	min_speed_factor: float = 0.3 ) -> Vector2:
+	if _mgr == null:
+		return Vector2.ZERO
+
+	var neighbors := _mgr.get_neighbors(bodyA.global_position, radius)
+	if neighbors.is_empty():
+		return Vector2.ZERO
+
+	var total := Vector2.ZERO
+
+	for n in neighbors:
+		if n == bodyA:
+			continue
+		var other := n as CharacterBody2D
+		if other == null:
+			continue
+
+		total += PushSolver2D.compute_push_on_a(
+			bodyA.global_position,
+			bodyA.velocity.length(),
+			bodyA.velocity.normalized(),
+			other.global_position,
+			other.velocity.length(),
+			other.velocity.normalized(),
+			radius,
+			max_push,
+			side_bias,
+			falloff_exp
+		)
+
+	return total.limit_length(max_push)	

@@ -21,6 +21,7 @@ func _physics_process(delta: float) -> void:
 		body.velocity = body.velocity.move_toward(Vector2.ZERO, friction * delta)
 	
 	if push_direction != Vector2.ZERO:
+		print("push applied to ", name, "with", push_direction, " and ", push_force )
 		body.velocity = body.velocity.move_toward(push_direction * max_speed, push_force * delta)
 	else:
 		pass

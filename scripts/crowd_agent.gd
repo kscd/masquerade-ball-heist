@@ -21,17 +21,15 @@ class_name CrowdAgent
 @export var dir_noise_deg: float = 10.0      # randomness in direction decision (degrees)
 @export var switch_hysteresis: float = 0.15  # 0..1: higher = less switching
 
-@export var push_radius: float = 150.0
+@export var push_radius: float = 400.0
 @export var max_side_push: float = 100180.0
 @export var push_forward_ratio: float = 0.20
-@export var push_falloff_exp: float = 1.5
+@export var push_falloff_exp: float = 1.2
 @export var max_total_push: float = 26000.0
 
-@export var obstacle_mask: int = 1           # collision mask bits for walls
+@export var obstacle_mask: int = 1         # collision mask bits for walls
 
 var _mgr: CrowdManager
-var _heading: Vector2 = Vector2.RIGHT        # unit vector
-var _speed: float = 0.0
 
 var _target: Vector2
 var _has_target := false
@@ -45,7 +43,6 @@ var _commit_timer: float = 0.0
 
 func _ready() -> void:
 	_mgr = get_parent() as CrowdManager
-	_heading = Vector2.RIGHT.rotated(randf_range(-PI, PI)).normalized()
 	_repick_timer = randf_range(0.0, repick_interval) # stagger
 	_last_pos = global_position
 
@@ -57,7 +54,7 @@ func physics_step(dt: float) -> void:
 	_maybe_start_idle(dt)
 
 	# Always compute push (even while idling)
-	var push_vec := _compute_total_push_vector()
+	var push_vec := PushSolver2D._compute_total_push_vector(_mgr, self, push_radius, max_total_push, push_falloff_exp, push_forward_ratio)
 	if push_vec.length_squared() > 0.0001:
 		%MovementController.push_direction = push_vec.normalized()
 		%MovementController.push_force = push_vec.length()
@@ -75,7 +72,7 @@ func physics_step(dt: float) -> void:
 	# Stuck detection
 	var moved := global_position.distance_to(_last_pos)
 	_last_pos = global_position
-	if moved < 1.0 and _speed > 10.0:
+	if moved < 1.0 and velocity.length() > 10.0:
 		_stuck_timer += dt
 	else:
 		_stuck_timer = maxf(_stuck_timer - dt * 2.0, 0.0)
@@ -94,7 +91,7 @@ func physics_step(dt: float) -> void:
 	if desired_dir.length_squared() > 0.0001:
 		desired_dir = desired_dir.normalized()
 	else:
-		desired_dir = _heading
+		desired_dir = velocity.normalized()
 
 	# Neighbor avoidance (direction-only)
 	desired_dir = _apply_neighbor_avoidance(desired_dir)
@@ -235,7 +232,7 @@ func _apply_neighbor_avoidance(desired_dir: Vector2) -> Vector2:
 		var away := (p - np).normalized()
 
 		# Stronger push if the neighbor is in front of us (more natural)
-		var in_front := _heading.dot((np - p).normalized()) # 1 = ahead
+		var in_front := velocity.normalized().dot((np - p).normalized()) # 1 = ahead
 		var front_factor := clampf((in_front + 0.2) / 1.2, 0.0, 1.0)
 
 		var strength := (neighbor_radius - d) / d
@@ -318,35 +315,3 @@ func _choose_snapped_dir_with_noise(desired_dir: Vector2) -> Vector2:
 
 func _pick_commit_time() -> float:
 	return randf_range(dir_commit_min, dir_commit_max)
-	
-func _compute_total_push_vector() -> Vector2:
-	if _mgr == null:
-		return Vector2.ZERO
-
-	var neighbors := _mgr.get_neighbors(global_position, push_radius)
-	if neighbors.is_empty():
-		return Vector2.ZERO
-
-	var total := Vector2.ZERO
-
-	for n in neighbors:
-		if n == self:
-			continue
-		var other := n as CrowdAgent
-		if other == null:
-			continue
-
-		total += PushSolver2D.compute_push_on_a(
-			global_position,
-			_speed,
-			_heading,
-			other.global_position,
-			other._speed,
-			other._heading,
-			push_radius,
-			max_side_push,
-			push_forward_ratio,
-			push_falloff_exp
-		)
-
-	return total.limit_length(max_total_push)

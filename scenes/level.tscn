@@ -96,7 +96,8 @@ offset = Vector2(1169, 1989)
 spawn_count = 300
 spawn_poly = NodePath("../Polygon2D")
 
-[node name="CrowdManager" parent="." unique_id=61583125 instance=ExtResource("8_wc255")]
+[node name="CrowdManager" parent="." unique_id=61583125 node_paths=PackedStringArray("player") instance=ExtResource("8_wc255")]
+player = NodePath("../Player")
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=1558515404]
 position = Vector2(2, 1)

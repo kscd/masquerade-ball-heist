@@ -3,7 +3,9 @@ extends Node2D
 class_name CrowdManager
 
 @export var cell_size: float = 64.0  # pixels; ~2–4x agent radius
-var _grid: Dictionary = {}           # Dictionary: Vector2i -> Array[CrowdAgent2D]
+@export var player: CharacterBody2D  # drag your Player node here in the inspector
+
+var _grid: Dictionary = {}           # Dictionary: Vector2i -> Array[Node2D]
 
 func clear_grid() -> void:
 	_grid.clear()
@@ -11,7 +13,7 @@ func clear_grid() -> void:
 func _cell_of(pos: Vector2) -> Vector2i:
 	return Vector2i(floori(pos.x / cell_size), floori(pos.y / cell_size))
 
-func insert_agent(agent: Node2D, pos: Vector2) -> void:
+func insert_agent(agent: CharacterBody2D, pos: Vector2) -> void:
 	var c := _cell_of(pos)
 	if not _grid.has(c):
 		_grid[c] = []
@@ -32,6 +34,9 @@ func get_neighbors(pos: Vector2, radius: float) -> Array:
 
 func _physics_process(dt: float) -> void:
 	clear_grid()
+	
+	if player:
+		insert_agent(player, player.global_position)
 
 	# 1) Build grid
 	for child in get_children():

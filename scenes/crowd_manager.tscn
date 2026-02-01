@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d25fgre156d1g"]
 
-[ext_resource type="Script" path="res://scripts/crowd_manager.gd" id="1_y2edp"]
+[ext_resource type="Script" uid="uid://br05f7g0hrkdf" path="res://scripts/crowd_manager.gd" id="1_y2edp"]
 
 [node name="CrowdManager" type="Node2D" unique_id=61583125]
 script = ExtResource("1_y2edp")

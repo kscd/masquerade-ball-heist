@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://sgjccjo5o1os"]
 
 [ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="1_1oy5q"]
+[ext_resource type="PackedScene" uid="uid://cni6u1uipxgpi" path="res://scenes/crowd_agent.tscn" id="2_i0j6o"]
+[ext_resource type="PackedScene" uid="uid://c30c6v3tnaph1" path="res://scenes/player.tscn" id="3_cqdmk"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_i0j6o"]
 a = Vector2(1497, 4)
@@ -45,5 +47,24 @@ position = Vector2(0, 500)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2DW" unique_id=170558056]
 shape = SubResource("SegmentShape2D_cuo03")
 
-[node name="CrowdManager" parent="." unique_id=61583125 instance=ExtResource("1_1oy5q")]
+[node name="CrowdManager" parent="." unique_id=61583125 node_paths=PackedStringArray("player") instance=ExtResource("1_1oy5q")]
 position = Vector2(233, 182)
+player = NodePath("../Player")
+
+[node name="CharacterBody2D" parent="CrowdManager" unique_id=737167328 instance=ExtResource("2_i0j6o")]
+position = Vector2(769.39996, 412.5)
+sample_count = 10
+reach_dist = 16.0
+neighbor_weight = 5.0
+forward_avoid_dist = 48.0
+avoid_weight = 2.0
+dir_commit_min = 0.35
+dir_commit_max = 0.9
+dir_noise_deg = 10.0
+switch_hysteresis = 0.15
+push_forward_ratio = 0.2
+push_falloff_exp = 1.2
+obstacle_mask = 1
+
+[node name="Player" parent="." unique_id=637585576 instance=ExtResource("3_cqdmk")]
+position = Vector2(200, 200)
