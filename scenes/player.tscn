@@ -4,16 +4,16 @@
 [ext_resource type="PackedScene" uid="uid://bdrfq6cj47gsp" path="res://scenes/character.tscn" id="3_dqkch"]
 [ext_resource type="Script" uid="uid://p3wkkm523vyh" path="res://scripts/thief_controller.gd" id="3_qhqgy"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
-radius = 19.235384
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
-radius = 24.0
-height = 110.0
+height = 72.0
 
 [node name="Player" type="CharacterBody2D" unique_id=637585576 groups=["player"]]
-collision_layer = 3
+collision_layer = 6
 collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1395806930]
+shape = SubResource("CapsuleShape2D_qhqgy")
+debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="InputHandler" type="Node" parent="." unique_id=1696016644]
 script = ExtResource("3_qhqgy")
@@ -23,15 +23,3 @@ unique_name_in_owner = true
 script = ExtResource("1_g2els")
 
 [node name="Character" parent="." unique_id=474885732 instance=ExtResource("3_dqkch")]
-
-[node name="Collider" type="CollisionShape2D" parent="." unique_id=2147147240]
-position = Vector2(0, -3)
-shape = SubResource("CircleShape2D_qhqgy")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=458030172]
-collision_layer = 8
-
-[node name="ClickCollision" type="CollisionShape2D" parent="Area2D" unique_id=1395806930]
-position = Vector2(0, -43)
-shape = SubResource("CapsuleShape2D_qhqgy")
-debug_color = Color(0, 0.6, 0.69803923, 0.20392157)
