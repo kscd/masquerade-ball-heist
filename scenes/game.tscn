@@ -11,18 +11,18 @@
 [ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="8_ca42v"]
 [ext_resource type="PackedScene" path="res://scenes/exit.tscn" id="9_rysoc"]
 [ext_resource type="Texture2D" uid="uid://dlxvluvdcxs25" path="res://sprites/mansion/walls-bottom-left.png" id="11_37s47"]
-[ext_resource type="PackedScene" path="res://scenes/obstacle/table.tscn" id="11_dinhu"]
+[ext_resource type="PackedScene" uid="uid://ci0a06vd7pff7" path="res://scenes/obstacle/table.tscn" id="11_dinhu"]
 [ext_resource type="Texture2D" uid="uid://cv583ukfkbnf" path="res://sprites/mansion/walls-bottom-right.png" id="12_bt5mj"]
-[ext_resource type="PackedScene" path="res://scenes/obstacle/bed.tscn" id="12_kvuet"]
-[ext_resource type="PackedScene" path="res://scenes/obstacle/safe_closed.tscn" id="12_trtic"]
+[ext_resource type="PackedScene" uid="uid://dmi7vfjhw28w8" path="res://scenes/obstacle/bed.tscn" id="12_kvuet"]
+[ext_resource type="PackedScene" uid="uid://658hujeue6ur" path="res://scenes/obstacle/safe_closed.tscn" id="12_trtic"]
 [ext_resource type="Texture2D" uid="uid://b4e4pjug8e5xy" path="res://sprites/mansion/walls-center-bottom.png" id="13_e1j6l"]
-[ext_resource type="PackedScene" path="res://scenes/obstacle/safe_open.tscn" id="13_trtic"]
-[ext_resource type="PackedScene" path="res://scenes/collectible/bar_stack.tscn" id="14_ir15t"]
+[ext_resource type="PackedScene" uid="uid://ckvarrp6qvged" path="res://scenes/obstacle/safe_open.tscn" id="13_trtic"]
+[ext_resource type="PackedScene" uid="uid://brdh0dh5m6xo2" path="res://scenes/collectible/bar_stack.tscn" id="14_ir15t"]
 [ext_resource type="Texture2D" uid="uid://155yqqeva7bn" path="res://sprites/mansion/walls-center-left.png" id="14_pl11u"]
-[ext_resource type="PackedScene" path="res://scenes/obstacle/desk.tscn" id="14_rysoc"]
+[ext_resource type="PackedScene" uid="uid://dl2m1ddwihnuc" path="res://scenes/obstacle/desk.tscn" id="14_rysoc"]
 [ext_resource type="Texture2D" uid="uid://brxlhu270hs6r" path="res://sprites/mansion/walls-center-right.png" id="15_bhx41"]
 [ext_resource type="Texture2D" uid="uid://df6ikhubxhr7q" path="res://sprites/mansion/walls-center-top-left.png" id="16_qnb83"]
-[ext_resource type="PackedScene" path="res://scenes/collectible/money_pile.tscn" id="16_ssvqc"]
+[ext_resource type="PackedScene" uid="uid://b3yv3honna0ib" path="res://scenes/collectible/money_pile.tscn" id="16_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://cm80xsfsa11sb" path="res://sprites/mansion/walls-center-top-right.png" id="17_sww3w"]
 [ext_resource type="Texture2D" uid="uid://my7eld3mlsuq" path="res://sprites/mansion/walls-center-top.png" id="18_suyxu"]
 [ext_resource type="Texture2D" uid="uid://bqmef2dqb5t3g" path="res://sprites/mansion/walls-outline.png" id="20_qouja"]
@@ -129,6 +129,7 @@ spawn_count = 200
 spawn_poly = NodePath("../SpawnPolygon2D")
 
 [node name="CrowdManager" parent="." unique_id=61583125 node_paths=PackedStringArray("player") instance=ExtResource("8_ca42v")]
+y_sort_enabled = true
 player = NodePath("../Player")
 
 [node name="SpawnPolygon2D" type="Polygon2D" parent="." unique_id=838033360]
@@ -175,69 +176,6 @@ polygon = PackedVector2Array(-31, 2348, 4135, 2348, 4143, -70, -69, -74)
 z_as_relative = false
 y_sort_enabled = true
 position = Vector2(2048, 1153)
-
-[node name="WallsBottomLeft" type="Sprite2D" parent="Mansion" unique_id=1305024853]
-z_index = -1
-z_as_relative = false
-texture = ExtResource("11_37s47")
-
-[node name="WallsBottomRight" type="Sprite2D" parent="Mansion" unique_id=270453190]
-z_index = -1
-z_as_relative = false
-texture = ExtResource("12_bt5mj")
-
-[node name="WallsCenterBottom" type="Sprite2D" parent="Mansion" unique_id=1702887140]
-z_as_relative = false
-y_sort_enabled = true
-texture = ExtResource("13_e1j6l")
-
-[node name="WallsCenterRight" type="Sprite2D" parent="Mansion" unique_id=1407396356]
-z_as_relative = false
-y_sort_enabled = true
-position = Vector2(936.75, 885.97)
-texture = ExtResource("15_bhx41")
-offset = Vector2(-936.75, -885.97)
-
-[node name="WallsCenterTopLeft" type="Sprite2D" parent="Mansion" unique_id=1152350648]
-z_as_relative = false
-y_sort_enabled = true
-position = Vector2(-912.065, -580.535)
-texture = ExtResource("16_qnb83")
-offset = Vector2(912.065, 580.535)
-
-[node name="WallsCenterTopRight" type="Sprite2D" parent="Mansion" unique_id=60268157]
-z_as_relative = false
-y_sort_enabled = true
-position = Vector2(912.065, -580.535)
-texture = ExtResource("17_sww3w")
-offset = Vector2(-912.065, 580.535)
-
-[node name="WallsCenterTop" type="Sprite2D" parent="Mansion" unique_id=1071103798]
-z_index = -1
-z_as_relative = false
-texture = ExtResource("18_suyxu")
-
-[node name="WallsOutline" type="Sprite2D" parent="Mansion" unique_id=1273451771]
-z_index = 2
-z_as_relative = false
-texture = ExtResource("20_qouja")
-
-[node name="WallsTopLeft" type="Sprite2D" parent="Mansion" unique_id=1860088818]
-z_index = -1
-z_as_relative = false
-texture = ExtResource("21_wljb1")
-
-[node name="WallsTopRight" type="Sprite2D" parent="Mansion" unique_id=1482559831]
-z_index = -1
-z_as_relative = false
-texture = ExtResource("22_v2yb1")
-
-[node name="WallsCenterLeft" type="Sprite2D" parent="Mansion" unique_id=1900736254]
-z_as_relative = false
-y_sort_enabled = true
-position = Vector2(-936.75, 877.82)
-texture = ExtResource("14_pl11u")
-offset = Vector2(936.75, -877.82)
 
 [node name="WallCollider" type="StaticBody2D" parent="Mansion" unique_id=1010311967]
 position = Vector2(-2048, -1153)
@@ -375,6 +313,72 @@ shape = SubResource("RectangleShape2D_fedci")
 position = Vector2(1637.5585, 456.8075)
 rotation = -3.1403239
 shape = SubResource("RectangleShape2D_8qswn")
+
+[node name="WallSprites" type="Node2D" parent="Mansion" unique_id=634167613]
+y_sort_enabled = true
+
+[node name="WallsBottomLeft" type="Sprite2D" parent="Mansion/WallSprites" unique_id=1305024853]
+z_index = -1
+z_as_relative = false
+texture = ExtResource("11_37s47")
+
+[node name="WallsBottomRight" type="Sprite2D" parent="Mansion/WallSprites" unique_id=270453190]
+z_index = -1
+z_as_relative = false
+texture = ExtResource("12_bt5mj")
+
+[node name="WallsCenterBottom" type="Sprite2D" parent="Mansion/WallSprites" unique_id=1702887140]
+z_as_relative = false
+y_sort_enabled = true
+texture = ExtResource("13_e1j6l")
+
+[node name="WallsCenterRight" type="Sprite2D" parent="Mansion/WallSprites" unique_id=1407396356]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(936.75, 885.97)
+texture = ExtResource("15_bhx41")
+offset = Vector2(-936.75, -885.97)
+
+[node name="WallsCenterTopLeft" type="Sprite2D" parent="Mansion/WallSprites" unique_id=1152350648]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-912.06494, -580.535)
+texture = ExtResource("16_qnb83")
+offset = Vector2(912.065, 580.535)
+
+[node name="WallsCenterTopRight" type="Sprite2D" parent="Mansion/WallSprites" unique_id=60268157]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(912.06494, -580.535)
+texture = ExtResource("17_sww3w")
+offset = Vector2(-912.065, 580.535)
+
+[node name="WallsCenterTop" type="Sprite2D" parent="Mansion/WallSprites" unique_id=1071103798]
+z_index = -1
+z_as_relative = false
+texture = ExtResource("18_suyxu")
+
+[node name="WallsOutline" type="Sprite2D" parent="Mansion/WallSprites" unique_id=1273451771]
+z_index = 2
+z_as_relative = false
+texture = ExtResource("20_qouja")
+
+[node name="WallsTopLeft" type="Sprite2D" parent="Mansion/WallSprites" unique_id=1860088818]
+z_index = -1
+z_as_relative = false
+texture = ExtResource("21_wljb1")
+
+[node name="WallsTopRight" type="Sprite2D" parent="Mansion/WallSprites" unique_id=1482559831]
+z_index = -1
+z_as_relative = false
+texture = ExtResource("22_v2yb1")
+
+[node name="WallsCenterLeft" type="Sprite2D" parent="Mansion/WallSprites" unique_id=1900736254]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-936.75, 877.82007)
+texture = ExtResource("14_pl11u")
+offset = Vector2(936.75, -877.82)
 
 [node name="Obstacle2" parent="." unique_id=436183618 instance=ExtResource("11_dinhu")]
 position = Vector2(640, 1203)
