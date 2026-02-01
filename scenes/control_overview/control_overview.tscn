@@ -18,15 +18,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 200
-theme_override_constants/margin_top = 100
-theme_override_constants/margin_right = 200
-theme_override_constants/margin_bottom = 100
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 150
 script = ExtResource("1_xokas")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1057725915]
 layout_mode = 2
-theme_override_constants/separation = 50
+theme_override_constants/separation = 200
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1165609068]
 visible = false
@@ -39,12 +39,12 @@ vertical_alignment = 1
 
 [node name="HBoxContainerTitles" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1462417058]
 layout_mode = 2
-theme_override_constants/separation = 490
+theme_override_constants/separation = 1200
 alignment = 1
 
 [node name="LabelPlayer1" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerTitles" unique_id=1801211537]
 layout_mode = 2
-text = "Thief"
+text = "  Thief"
 label_settings = ExtResource("3_0dh5g")
 
 [node name="LabelPlayer2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerTitles" unique_id=1759291152]
@@ -54,10 +54,15 @@ label_settings = ExtResource("3_0dh5g")
 
 [node name="HBoxContainerControls" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=235013678]
 layout_mode = 2
-theme_override_constants/separation = 260
+theme_override_constants/separation = 600
 alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls" unique_id=15637374]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls" unique_id=636201247]
+layout_mode = 2
+theme_override_constants/margin_top = 230
+theme_override_constants/margin_right = 400
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/MarginContainer" unique_id=15637374]
 custom_minimum_size = Vector2(550, 500)
 layout_mode = 2
 theme_override_constants/h_separation = 25
@@ -65,61 +70,61 @@ theme_override_constants/v_separation = 25
 columns = 3
 script = ExtResource("3_ta5ja")
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=2041450593]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainerControls/MarginContainer/GridContainer" unique_id=2041450593]
 layout_mode = 2
 
-[node name="W" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=1582006810]
-custom_minimum_size = Vector2(150, 150)
+[node name="W" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/MarginContainer/GridContainer" unique_id=1582006810]
+custom_minimum_size = Vector2(250, 250)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer/W" unique_id=1979789349]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/MarginContainer/GridContainer/W" unique_id=1979789349]
 layout_mode = 2
 text = "W"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=1561798770]
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainerControls/MarginContainer/GridContainer" unique_id=1561798770]
 layout_mode = 2
 
-[node name="A" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=606526401]
-custom_minimum_size = Vector2(150, 150)
+[node name="A" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/MarginContainer/GridContainer" unique_id=606526401]
+custom_minimum_size = Vector2(250, 250)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer/A" unique_id=1849903169]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/MarginContainer/GridContainer/A" unique_id=1849903169]
 layout_mode = 2
 text = "A"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="S" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=636398581]
-custom_minimum_size = Vector2(150, 150)
+[node name="S" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/MarginContainer/GridContainer" unique_id=636398581]
+custom_minimum_size = Vector2(250, 250)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer/S" unique_id=743702125]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/MarginContainer/GridContainer/S" unique_id=743702125]
 layout_mode = 2
 text = "S"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="D" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer" unique_id=700521083]
-custom_minimum_size = Vector2(150, 150)
+[node name="D" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/MarginContainer/GridContainer" unique_id=700521083]
+custom_minimum_size = Vector2(250, 250)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/GridContainer/D" unique_id=1055924695]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerControls/MarginContainer/GridContainer/D" unique_id=1055924695]
 layout_mode = 2
 text = "D"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls" unique_id=2002887078]
-custom_minimum_size = Vector2(550, 500)
+custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = ExtResource("5_dge5s")
 
 [node name="Panel" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/PanelContainer" unique_id=538452560]
-custom_minimum_size = Vector2(350, 500)
+custom_minimum_size = Vector2(700, 1000)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -127,10 +132,11 @@ script = ExtResource("4_ltf20")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/PanelContainer/Panel" unique_id=1865400582]
 layout_mode = 2
+theme_override_constants/separation = 50
 script = ExtResource("5_0dh5g")
 
 [node name="LMB" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerControls/PanelContainer/Panel/VBoxContainer" unique_id=387585348]
-custom_minimum_size = Vector2(150, 200)
+custom_minimum_size = Vector2(300, 400)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0

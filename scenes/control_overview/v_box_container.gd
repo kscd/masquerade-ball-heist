@@ -1,6 +1,5 @@
 extends VBoxContainer
 
-
 @export var customStyle: Script = preload("res://shared/style.gd")
 
 var font_baskervville = preload("res://shared/fonts/Baskervville/static/Baskervville-SemiBold.ttf")

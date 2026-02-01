@@ -9,8 +9,8 @@ const dark_cream = "#c4b295"
 const font_color_normal = gold_normal
 const font_color_hover = gold_hover
 const font_color_pressed = dark_cream
-const font_size = 75
-const border_width = 10
+const font_size = 120
+const border_width = 20
 
 func get_normal_style(scale: float) -> StyleBoxFlat:
 	var style = StyleBoxFlat.new()
@@ -50,7 +50,7 @@ func get_hover_style(scale: float) -> StyleBoxFlat:
 	style.corner_radius_top_left = border_width
 	style.corner_radius_top_right = border_width
 	
-	style.shadow_size = 16
+	style.shadow_size = 24
 	style.shadow_color = Color(1.0, 0.84, 0.0, 0.4)
 
 	return style
@@ -73,7 +73,7 @@ func get_pressed_style(scale: float) -> StyleBoxFlat:
 	style.corner_radius_top_left = border_width
 	style.corner_radius_top_right = border_width
 	
-	style.content_margin_top = 15
+	style.content_margin_top = 24
 	style.shadow_size = 8
 	style.shadow_color = Color(0, 0, 0, 0.6)
 	style.shadow_offset = Vector2(0, 4)
