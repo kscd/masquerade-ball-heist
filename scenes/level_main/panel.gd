@@ -3,8 +3,6 @@ extends Panel
 var showcase_ref: Node2D
 
 @onready var countdown_label = $MarginContainer/VBoxContainer/LabelCountdown
-@onready var game = %Game
-@onready var player = game.player
 
 func _ready() -> void:
 	var tween = create_tween()

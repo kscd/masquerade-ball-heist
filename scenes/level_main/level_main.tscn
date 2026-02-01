@@ -17,13 +17,15 @@ size = Vector2(550, 189.4202)
 
 [node name="Game" parent="." unique_id=172343982 instance=ExtResource("6_q5k7n")]
 unique_name_in_owner = true
-z_as_relative = false
 
 [node name="Player" parent="Game" index="0" unique_id=637585576]
 z_as_relative = false
 
 [node name="CollisionShape2D" parent="Game/Exit" parent_id_path=PackedInt32Array(172343982, 1118414250) index="0" unique_id=1702538791]
 shape = SubResource("RectangleShape2D_q5k7n")
+
+[node name="BlackOverlay" parent="Game" index="11" unique_id=902701172]
+visible = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1246356014]
 

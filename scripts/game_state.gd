@@ -29,7 +29,7 @@ func nextRound():
 	round_score = 0
 	current_lives = max_lives
 	get_tree().paused = false
-	get_tree().reload_current_scene()
+	switch_to_controls()
 	
 func restartGame():
 	print("restart")
@@ -44,6 +44,13 @@ func switch_to_level():
 func switch_to_menu():
 	current_state = State.MENU
 	get_tree().change_scene_to_file("res://scenes/main_menu/main.tscn")
+	
+func switch_to_controls():
+	current_state = State.MENU
+	if is_first_player_turn:
+		get_tree().change_scene_to_file("res://scenes/control_overview/control_overview.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/control_overview_round_2/control_overview.tscn")
 	
 func switch_to_round_over(condition: Round_end_condition):
 	GameEvents.round_over.emit(condition)
