@@ -7,11 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="4_dinhu"]
 [ext_resource type="PackedScene" uid="uid://0dt8el4fbxxp" path="res://scenes/screens/hud.tscn" id="5_kvuet"]
 [ext_resource type="Texture2D" uid="uid://sc52d2ue8ugc" path="res://sprites/mansion-reference.png" id="6_trtic"]
-[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="7_ir15t"]
+[ext_resource type="PackedScene" uid="uid://d17ncw2rb7hk3" path="res://scenes/spawner.tscn" id="7_ir15t"]
 [ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="8_ca42v"]
-[ext_resource type="PackedScene" uid="uid://07e6jj7kwoxb" path="res://scenes/exit.tscn" id="9_rysoc"]
+[ext_resource type="PackedScene" path="res://scenes/exit.tscn" id="9_rysoc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tnpc"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtaks"]
 resource_local_to_scene = true
 size = Vector2(550, 189.4202)
 
@@ -41,44 +41,46 @@ offset = Vector2(1169, 1989)
 
 [node name="Spawner" parent="." unique_id=1610160643 node_paths=PackedStringArray("spawn_poly") instance=ExtResource("7_ir15t")]
 spawn_count = 200
-spawn_poly = NodePath("../Polygon2D")
+spawn_poly = NodePath("../SpawnPolygon2D")
 
 [node name="CrowdManager" parent="." unique_id=61583125 instance=ExtResource("8_ca42v")]
 
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=838033360]
+[node name="SpawnPolygon2D" type="Polygon2D" parent="." unique_id=838033360]
 position = Vector2(2473.0002, -1204)
 scale = Vector2(2.12, 2.12)
 color = Color(1, 0, 1, 0.09411765)
 offset = Vector2(-1166.5098, 567.9246)
 invert_border = 0.1
-polygon = PackedVector2Array(51, 77, 32, 1054, 760, 1046, 758, 518, 1216, 516, 1205, 1023, 1883, 1025, 1885, 44)
+polygon = PackedVector2Array(67.92468, 53.30182, 32, 1054, 1899.0568, 1064.1509, 1885, 44)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1320844649]
+[node name="ColliderOutside" type="StaticBody2D" parent="." unique_id=1320844649]
 scale = Vector2(2.13, 2.13)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=16767773]
-polygon = PackedVector2Array(-3, 1083, 1932, 1085, 2111, 1270, -154, 1255)
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="ColliderOutside" unique_id=16767773]
+polygon = PackedVector2Array(-7.511737, 1057.7465, 1928.6384, 1060.5634, 2111, 1270, -154, 1255)
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2000424812]
-polygon = PackedVector2Array(-2, 1099, -2, -22, -189, -203, -146, 1270)
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="ColliderOutside" unique_id=2000424812]
+position = Vector2(28.169014, 29.577463)
+polygon = PackedVector2Array(9.859152, 1092.9576, 15.962439, -34.2723, -189, -203, -146, 1270)
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1957333635]
-polygon = PackedVector2Array(1945, 5, -15, -2, -220, -232, 2134, -225)
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="ColliderOutside" unique_id=1957333635]
+polygon = PackedVector2Array(1875.5868, 32.394363, 8.450704, 32.394363, -220, -232, 2182.1597, -252.11267)
 
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1916720417]
-polygon = PackedVector2Array(2111, 1284, 1918, 1087, 1920, -53, 2156, -248)
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="ColliderOutside" unique_id=1916720417]
+polygon = PackedVector2Array(2111, 1284, 1918, 1087, 1907.9812, 421.12674, 2156, -248)
 
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1369165879]
-polygon = PackedVector2Array(770, 1163, 760, 514, 1197, 524, 1199, 1204)
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="ColliderOutside" unique_id=1212385040]
+polygon = PackedVector2Array(2105.1643, 436.1502, 1874.1783, 416.9014, 1875.5868, 30.985914, 2162.9106, -292.01877)
 
 [node name="Exit" parent="." unique_id=1118414250 instance=ExtResource("9_rysoc")]
 position = Vector2(2052, 132)
 
 [node name="CollisionShape2D" parent="Exit" index="0" unique_id=1702538791]
 scale = Vector2(1, 1.003061)
-shape = SubResource("RectangleShape2D_0tnpc")
+shape = SubResource("RectangleShape2D_vtaks")
 
 [node name="BlackOverlay" type="Polygon2D" parent="." unique_id=902701172]
+visible = false
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-31, 2348, 4135, 2348, 4143, -70, -69, -74)
 
