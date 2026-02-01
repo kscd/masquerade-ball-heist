@@ -13,7 +13,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtaks"]
 resource_local_to_scene = true
-size = Vector2(550, 189.4202)
+size = Vector2(292, 222.31949)
 
 [node name="Game" type="Node2D" unique_id=172343982]
 script = ExtResource("1_vtaks")
@@ -48,7 +48,7 @@ spawn_poly = NodePath("../SpawnPolygon2D")
 [node name="SpawnPolygon2D" type="Polygon2D" parent="." unique_id=838033360]
 position = Vector2(2473.0002, -1204)
 scale = Vector2(2.12, 2.12)
-color = Color(1, 0, 1, 0.09411765)
+color = Color(1, 0, 1, 0)
 offset = Vector2(-1166.5098, 567.9246)
 invert_border = 0.1
 polygon = PackedVector2Array(67.92468, 53.30182, 32, 1054, 1899.0568, 1064.1509, 1885, 44)
@@ -76,8 +76,11 @@ polygon = PackedVector2Array(2105.1643, 436.1502, 1874.1783, 416.9014, 1875.5868
 position = Vector2(2052, 132)
 
 [node name="CollisionShape2D" parent="Exit" index="0" unique_id=1702538791]
+position = Vector2(-14, 10.5)
 scale = Vector2(1, 1.003061)
 shape = SubResource("RectangleShape2D_vtaks")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Exit" unique_id=1892513315]
 
 [node name="BlackOverlay" type="Polygon2D" parent="." unique_id=902701172]
 visible = false
