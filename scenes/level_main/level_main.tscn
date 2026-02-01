@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://jllv3wm3ws2p"]
 
 [ext_resource type="Script" uid="uid://bie5lvlxhjlac" path="res://scenes/level_main/panel.gd" id="1_vwe0s"]
-[ext_resource type="StyleBox" uid="uid://b6rsmvibq24vv" path="res://shared/fading_panel.tres" id="1_xumhb"]
 [ext_resource type="LabelSettings" uid="uid://br33vnfar1uca" path="res://shared/main_menu_label.tres" id="3_jku0o"]
 [ext_resource type="LabelSettings" uid="uid://6hkdaf5umo4l" path="res://shared/countdown_menu_label.tres" id="4_h7g30"]
+[ext_resource type="PackedScene" uid="uid://cjt5kbbu0p3k3" path="res://scenes/screens/round_over.tscn" id="5_fbhgu"]
+[ext_resource type="PackedScene" uid="uid://dt77m0c81f1n2" path="res://scenes/game.tscn" id="6_q5k7n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_enupx"]
+resource_local_to_scene = true
+size = Vector2(550, 189.4202)
 
 [node name="LevelMain" type="Node2D" unique_id=846572867]
 
@@ -15,7 +20,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = ExtResource("1_xumhb")
 script = ExtResource("1_vwe0s")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Panel" unique_id=357749453]
@@ -48,3 +52,17 @@ text = "10"
 label_settings = ExtResource("4_h7g30")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=739974004]
+
+[node name="RoundOver" parent="CanvasLayer2" unique_id=276531622 instance=ExtResource("5_fbhgu")]
+
+[node name="Game" parent="." unique_id=172343982 instance=ExtResource("6_q5k7n")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+
+[node name="CollisionShape2D" parent="Game/Exit" parent_id_path=PackedInt32Array(172343982, 1118414250) index="0" unique_id=1702538791]
+shape = SubResource("RectangleShape2D_enupx")
+
+[editable path="Game"]
+[editable path="Game/Exit"]

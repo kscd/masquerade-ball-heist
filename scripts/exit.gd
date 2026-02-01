@@ -12,7 +12,6 @@ func complete_round():
 	GameState.switch_to_round_over(Player.Round_end_condition.THIEF_FLED)
 
 func _on_exit_body_entered(body: Node2D) -> void:
-	print("player in exit")
 	timer.start()
 
 func _on_exit_body_exited(body: Node2D) -> void:

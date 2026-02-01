@@ -12,13 +12,13 @@ func _ready():
 func _on_trigger_screen(condition: Player.Round_end_condition):
 	match condition:
 		Player.Round_end_condition.SEEKER_NO_LIVES:
-			message_label.text = "The seeker has no tries left. The thief escaped with:"
+			message_label.text = "The seeker has no tries left.\nThe thief escaped with:"
 			score_label.text = str(GameState.round_score) + "$"
 		Player.Round_end_condition.THIEF_FLED:
 			message_label.text = "The thief escaped with:"
 			score_label.text = str(GameState.round_score) + "$"
 		Player.Round_end_condition.THIEF_CAUGHT:
-			message_label.text = "The thief was caught. Nothing of value was stolen."
+			message_label.text = "The thief was caught.\nNothing of value was stolen."
 			score_label.text = ""
 	show()
 	get_tree().paused = true
