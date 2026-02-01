@@ -7,22 +7,29 @@
 [ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="4_dinhu"]
 [ext_resource type="PackedScene" uid="uid://0dt8el4fbxxp" path="res://scenes/screens/hud.tscn" id="5_kvuet"]
 [ext_resource type="Texture2D" uid="uid://sc52d2ue8ugc" path="res://sprites/mansion-reference.png" id="6_trtic"]
-[ext_resource type="PackedScene" uid="uid://d17ncw2rb7hk3" path="res://scenes/spawner.tscn" id="7_ir15t"]
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="7_ir15t"]
 [ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="8_ca42v"]
-[ext_resource type="PackedScene" path="res://scenes/exit.tscn" id="9_rysoc"]
+[ext_resource type="PackedScene" uid="uid://07e6jj7kwoxb" path="res://scenes/exit.tscn" id="9_rysoc"]
 [ext_resource type="Texture2D" uid="uid://dlxvluvdcxs25" path="res://sprites/mansion/walls-bottom-left.png" id="11_37s47"]
+[ext_resource type="PackedScene" uid="uid://ci0a06vd7pff7" path="res://scenes/obstacle/table.tscn" id="11_dinhu"]
 [ext_resource type="Texture2D" uid="uid://cv583ukfkbnf" path="res://sprites/mansion/walls-bottom-right.png" id="12_bt5mj"]
+[ext_resource type="PackedScene" uid="uid://dmi7vfjhw28w8" path="res://scenes/obstacle/bed.tscn" id="12_kvuet"]
+[ext_resource type="PackedScene" uid="uid://658hujeue6ur" path="res://scenes/obstacle/safe_closed.tscn" id="12_trtic"]
 [ext_resource type="Texture2D" uid="uid://b4e4pjug8e5xy" path="res://sprites/mansion/walls-center-bottom.png" id="13_e1j6l"]
+[ext_resource type="PackedScene" uid="uid://ckvarrp6qvged" path="res://scenes/obstacle/safe_open.tscn" id="13_trtic"]
+[ext_resource type="PackedScene" uid="uid://brdh0dh5m6xo2" path="res://scenes/collectible/bar_stack.tscn" id="14_ir15t"]
 [ext_resource type="Texture2D" uid="uid://155yqqeva7bn" path="res://sprites/mansion/walls-center-left.png" id="14_pl11u"]
+[ext_resource type="PackedScene" uid="uid://dl2m1ddwihnuc" path="res://scenes/obstacle/desk.tscn" id="14_rysoc"]
 [ext_resource type="Texture2D" uid="uid://brxlhu270hs6r" path="res://sprites/mansion/walls-center-right.png" id="15_bhx41"]
 [ext_resource type="Texture2D" uid="uid://df6ikhubxhr7q" path="res://sprites/mansion/walls-center-top-left.png" id="16_qnb83"]
+[ext_resource type="PackedScene" uid="uid://b3yv3honna0ib" path="res://scenes/collectible/money_pile.tscn" id="16_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://cm80xsfsa11sb" path="res://sprites/mansion/walls-center-top-right.png" id="17_sww3w"]
 [ext_resource type="Texture2D" uid="uid://my7eld3mlsuq" path="res://sprites/mansion/walls-center-top.png" id="18_suyxu"]
 [ext_resource type="Texture2D" uid="uid://bqmef2dqb5t3g" path="res://sprites/mansion/walls-outline.png" id="20_qouja"]
 [ext_resource type="Texture2D" uid="uid://coxo7eu6m0ii4" path="res://sprites/mansion/walls-top-left.png" id="21_wljb1"]
 [ext_resource type="Texture2D" uid="uid://bkupqkfnit3e1" path="res://sprites/mansion/walls-top-right.png" id="22_v2yb1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5newe"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sww3w"]
 resource_local_to_scene = true
 size = Vector2(292, 222.31949)
 
@@ -31,11 +38,10 @@ z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_vtaks")
 
-[node name="Player" parent="." unique_id=637585576 groups=["player"] instance=ExtResource("1_0tnpc")]
-z_as_relative = false
-y_sort_enabled = true
+[node name="Player" parent="." unique_id=637585576 node_paths=PackedStringArray("mgr") groups=["player"] instance=ExtResource("1_0tnpc")]
 position = Vector2(750, 433)
 collision_layer = 3
+mgr = NodePath("../CrowdManager")
 
 [node name="Collectible" parent="." unique_id=1076301399 instance=ExtResource("2_vtaks")]
 position = Vector2(468, 435)
@@ -95,7 +101,7 @@ position = Vector2(2052, 132)
 [node name="CollisionShape2D" parent="Exit" index="0" unique_id=1702538791]
 position = Vector2(-14, 10.5)
 scale = Vector2(1, 1.003061)
-shape = SubResource("RectangleShape2D_5newe")
+shape = SubResource("RectangleShape2D_sww3w")
 
 [node name="BlackOverlay" type="Polygon2D" parent="." unique_id=902701172]
 visible = false
@@ -169,5 +175,37 @@ y_sort_enabled = true
 position = Vector2(-936.75, 877.82)
 texture = ExtResource("14_pl11u")
 offset = Vector2(936.75, -877.82)
+
+[node name="Obstacle2" parent="." unique_id=436183618 instance=ExtResource("11_dinhu")]
+position = Vector2(640, 1203)
+
+[node name="Obstacle3" parent="." unique_id=1187680134 instance=ExtResource("12_kvuet")]
+position = Vector2(246, 1948)
+
+[node name="Obstacle4" parent="." unique_id=1521932405 instance=ExtResource("12_trtic")]
+position = Vector2(182, 1700)
+
+[node name="Obstacle5" parent="." unique_id=459985089 instance=ExtResource("13_trtic")]
+z_index = -65
+position = Vector2(342, 1701)
+
+[node name="Obstacle6" parent="." unique_id=1101301526 instance=ExtResource("14_rysoc")]
+position = Vector2(3277, 727)
+
+[node name="Obstacle7" parent="." unique_id=1263987009 instance=ExtResource("14_rysoc")]
+position = Vector2(3695, 719)
+
+[node name="Obstacle8" parent="." unique_id=2069744940 instance=ExtResource("14_rysoc")]
+position = Vector2(3277, 387)
+
+[node name="Obstacle9" parent="." unique_id=439093691 instance=ExtResource("14_rysoc")]
+position = Vector2(3697, 386)
+
+[node name="Collectible2" parent="." unique_id=921361450 instance=ExtResource("14_ir15t")]
+position = Vector2(307, 1733)
+
+[node name="Collectible3" parent="." unique_id=1628721972 instance=ExtResource("16_ssvqc")]
+z_index = -64
+position = Vector2(636, 1393)
 
 [editable path="Exit"]

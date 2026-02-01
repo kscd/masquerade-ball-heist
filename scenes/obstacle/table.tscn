@@ -1,16 +1,16 @@
-[gd_scene format=3 uid="uid://bxlyvl12pgcvr"]
+[gd_scene format=3 uid="uid://ci0a06vd7pff7"]
 
-[ext_resource type="Texture2D" uid="uid://bnoeahg7mcapv" path="res://icon.svg" id="1_f7iuw"]
+[ext_resource type="Texture2D" uid="uid://buf8t88c11dod" path="res://sprites/mansion/table-01.png" id="1_d1efq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ys07"]
-size = Vector2(142, 141)
+size = Vector2(198.5, 517)
 
 [node name="Obstacle" type="StaticBody2D" unique_id=1070146420]
 z_index = -64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1471676894]
-position = Vector2(0, 0.5)
+position = Vector2(-0.25, 0.5)
 shape = SubResource("RectangleShape2D_1ys07")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=613815491]
-texture = ExtResource("1_f7iuw")
+texture = ExtResource("1_d1efq")
