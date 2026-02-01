@@ -4,10 +4,16 @@
 [ext_resource type="PackedScene" uid="uid://bhtx7d8nan6qt" path="res://scenes/collectible/collectible_sample.tscn" id="2_tjjfe"]
 [ext_resource type="PackedScene" uid="uid://bxlyvl12pgcvr" path="res://scenes/obstacle/obstacle.tscn" id="3_3qupv"]
 [ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="4_hu0ac"]
-[ext_resource type="PackedScene" uid="uid://0dt8el4fbxxp" path="res://scenes/hud.tscn" id="5_3x846"]
+[ext_resource type="PackedScene" uid="uid://0dt8el4fbxxp" path="res://scenes/screens/hud.tscn" id="5_3x846"]
 [ext_resource type="Texture2D" uid="uid://sc52d2ue8ugc" path="res://sprites/mansion-reference.png" id="6_cdoi4"]
 [ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="7_sm15i"]
 [ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="8_j82p7"]
+[ext_resource type="PackedScene" uid="uid://07e6jj7kwoxb" path="res://scenes/exit.tscn" id="9_j82p7"]
+[ext_resource type="PackedScene" uid="uid://cjt5kbbu0p3k3" path="res://scenes/screens/round_over.tscn" id="10_g0yun"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g0yun"]
+resource_local_to_scene = true
+size = Vector2(550, 189.4202)
 
 [node name="Sam" type="Node2D" unique_id=2027881017]
 
@@ -16,6 +22,8 @@ position = Vector2(750, 433)
 
 [node name="Collectible" parent="." unique_id=1076301399 instance=ExtResource("2_tjjfe")]
 position = Vector2(468, 435)
+collision_layer = 1
+collision_mask = 1
 
 [node name="Obstacle" parent="." unique_id=1070146420 instance=ExtResource("3_3qupv")]
 position = Vector2(1241, 410)
@@ -46,12 +54,6 @@ polygon = PackedVector2Array(51, 77, 32, 1054, 760, 1046, 758, 518, 1216, 516, 1
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=92579591]
 scale = Vector2(2.13, 2.13)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1882635119]
-visible = false
-position = Vector2(198, 192.00002)
-scale = Vector2(0.394437, 0.33203956)
-polygon = PackedVector2Array(15, 17, 301, 484, 761, 419, 533, 140, 218, 225)
-
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1698742592]
 polygon = PackedVector2Array(-3, 1083, 1932, 1085, 2111, 1270, -154, 1255)
 
@@ -66,3 +68,16 @@ polygon = PackedVector2Array(2111, 1284, 1918, 1087, 1920, -53, 2156, -248)
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=997325234]
 polygon = PackedVector2Array(770, 1163, 760, 514, 1197, 524, 1199, 1204)
+
+[node name="Exit" parent="." unique_id=1118414250 instance=ExtResource("9_j82p7")]
+position = Vector2(2052, 132)
+
+[node name="CollisionShape2D" parent="Exit" index="0" unique_id=1702538791]
+scale = Vector2(1, 1.003061)
+shape = SubResource("RectangleShape2D_g0yun")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=574417425]
+
+[node name="RoundOver" parent="CanvasLayer" unique_id=276531622 instance=ExtResource("10_g0yun")]
+
+[editable path="Exit"]

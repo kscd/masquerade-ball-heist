@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cjt5kbbu0p3k3"]
+
+[ext_resource type="Script" uid="uid://h3ijtmf8nbfy" path="res://scripts/screens/round_over.gd" id="1_apvsg"]
+[ext_resource type="LabelSettings" uid="uid://6hkdaf5umo4l" path="res://shared/countdown_menu_label.tres" id="2_6qemi"]
+[ext_resource type="LabelSettings" path="res://shared/player_label_settings.tres" id="2_tjyb7"]
+
+[node name="RoundOver" type="Control" unique_id=276531622]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_apvsg")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=19374226]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=989075323]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MessageLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1856500911]
+layout_mode = 2
+text = "asdferdfas"
+label_settings = ExtResource("2_tjyb7")
+
+[node name="ScoreLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2118796631]
+layout_mode = 2
+text = "teststes test test st set s e "
+label_settings = ExtResource("2_6qemi")

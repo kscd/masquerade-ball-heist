@@ -23,12 +23,10 @@ func collect():
 	parent.queue_free()
 
 func _on_collectible_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		timer.start()
+	timer.start()
 
 func _on_collectible_body_exited(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		timer.stop()
+	timer.stop()
 
 func _on_timer_timeout() -> void:
 	collect()

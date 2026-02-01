@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://07e6jj7kwoxb"]
+
+[ext_resource type="Script" uid="uid://bv2amlhca7ccc" path="res://scripts/exit.gd" id="1_l0aq0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0aq0"]
+resource_local_to_scene = true
+
+[node name="Exit" type="Area2D" unique_id=1118414250]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_l0aq0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1702538791]
+shape = SubResource("RectangleShape2D_l0aq0")
+
+[node name="Timer" type="Timer" parent="." unique_id=553177574]
+
+[connection signal="body_entered" from="." to="." method="_on_exit_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_exit_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
