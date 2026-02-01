@@ -31,6 +31,8 @@ func _physics_process(delta: float) -> void:
 		start_hop()
 	else:
 		stop_hop()
+	
+		
 
 func start_hop():
 	if is_hopping: return

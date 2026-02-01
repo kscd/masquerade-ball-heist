@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://sgjccjo5o1os"]
+
+[ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="1_1oy5q"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_i0j6o"]
+a = Vector2(1497, 4)
+b = Vector2(-1235, 7)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_cqdmk"]
+a = Vector2(62, 602)
+b = Vector2(52, -657)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4o3o0"]
+a = Vector2(1042, 2)
+b = Vector2(-1129, 4)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_cuo03"]
+a = Vector2(0, 658)
+b = Vector2(-2, -554)
+
+[node name="AgentTesting" type="Node2D" unique_id=1416124967]
+
+[node name="StaticBody2DN" type="StaticBody2D" parent="." unique_id=1399929584]
+position = Vector2(969, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2DN" unique_id=142025605]
+shape = SubResource("SegmentShape2D_i0j6o")
+
+[node name="StaticBody2DE" type="StaticBody2D" parent="." unique_id=518411037]
+position = Vector2(1922, 542)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2DE" unique_id=641248322]
+position = Vector2(-50, 21)
+shape = SubResource("SegmentShape2D_cqdmk")
+
+[node name="StaticBody2DS" type="StaticBody2D" parent="." unique_id=1667521368]
+position = Vector2(955, 1080)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2DS" unique_id=1408477034]
+shape = SubResource("SegmentShape2D_4o3o0")
+
+[node name="StaticBody2DW" type="StaticBody2D" parent="." unique_id=15513397]
+position = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2DW" unique_id=170558056]
+shape = SubResource("SegmentShape2D_cuo03")
+
+[node name="CrowdManager" parent="." unique_id=61583125 instance=ExtResource("1_1oy5q")]
+position = Vector2(233, 182)

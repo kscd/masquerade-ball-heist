@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bnbg1jqpalkpn"]
+
+[ext_resource type="PackedScene" uid="uid://c30c6v3tnaph1" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="2_0wfyh"]
+
+[node name="Main" type="Node2D" unique_id=63234984]
+
+[node name="Player" parent="." unique_id=1129632678 instance=ExtResource("1_o5qli")]
+
+[node name="Cursor" parent="." unique_id=105940319 instance=ExtResource("2_0wfyh")]

@@ -27,6 +27,12 @@ class_name CrowdAgent
 @export var dir_noise_deg: float = 10.0      # randomness in direction decision (degrees)
 @export var switch_hysteresis: float = 0.15  # 0..1: higher = less switching
 
+@export var push_radius: float = 28.0
+@export var max_side_push: float = 180.0
+@export var push_forward_ratio: float = 0.20
+@export var push_falloff_exp: float = 1.5
+@export var max_total_push: float = 260.0
+
 @export var obstacle_mask: int = 1           # collision mask bits for walls
 
 var _mgr: CrowdManager
@@ -55,7 +61,19 @@ func register_in_grid() -> void:
 
 func physics_step(dt: float) -> void:
 	_maybe_start_idle(dt)
-	if _update_idle(dt): 
+
+	# Always compute push (even while idling)
+	var push_vec := _compute_total_push_vector()
+	if push_vec.length_squared() > 0.0001:
+		%MovementController.push_direction = push_vec.normalized()
+		%MovementController.push_force = push_vec.length()
+	else:
+		%MovementController.push_direction = Vector2.ZERO
+		%MovementController.push_force = 0.0
+
+	# If idling: don't do AI steering, but still allow push to move us
+	if _update_idle(dt):
+		%MovementController.input_direction = Vector2.ZERO
 		return
 	_repick_timer -= dt
 
@@ -306,3 +324,35 @@ func _choose_snapped_dir_with_noise(desired_dir: Vector2) -> Vector2:
 
 func _pick_commit_time() -> float:
 	return randf_range(dir_commit_min, dir_commit_max)
+	
+func _compute_total_push_vector() -> Vector2:
+	if _mgr == null:
+		return Vector2.ZERO
+
+	var neighbors := _mgr.get_neighbors(global_position, push_radius)
+	if neighbors.is_empty():
+		return Vector2.ZERO
+
+	var total := Vector2.ZERO
+
+	for n in neighbors:
+		if n == self:
+			continue
+		var other := n as CrowdAgent
+		if other == null:
+			continue
+
+		total += PushSolver2D.compute_push_on_a(
+			global_position,
+			_speed,
+			_heading,
+			other.global_position,
+			other._speed,
+			other._heading,
+			push_radius,
+			max_side_push,
+			push_forward_ratio,
+			push_falloff_exp
+		)
+
+	return total.limit_length(max_total_push)
