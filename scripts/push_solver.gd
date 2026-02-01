@@ -69,7 +69,15 @@ static func compute_push_on_a(
 	var strength := max_push * proximity * toward * speed_factor
 	return push_dir * strength
 	
-static func _compute_total_push_vector(_mgr: CrowdManager, bodyA: CharacterBody2D,	radius: float, max_push: float, falloff_exp: float = 1.5, side_bias: float = 0.65,	min_speed_factor: float = 0.3 ) -> Vector2:
+static func _compute_total_push_vector(
+	_mgr: CrowdManager,
+	bodyA: CharacterBody2D,
+	radius: float,
+	max_push: float,
+	falloff_exp: float = 1.5,
+	side_bias: float = 0.65,
+	min_speed_factor: float = 0.3
+) -> Vector2:
 	if _mgr == null:
 		return Vector2.ZERO
 
@@ -77,26 +85,39 @@ static func _compute_total_push_vector(_mgr: CrowdManager, bodyA: CharacterBody2
 	if neighbors.is_empty():
 		return Vector2.ZERO
 
+	var va := bodyA.velocity
+	var speed_a := va.length()
+	var dir_a := va / speed_a if speed_a > 0.001 else Vector2.RIGHT
+
 	var total := Vector2.ZERO
 
 	for n in neighbors:
 		if n == bodyA:
 			continue
+
 		var other := n as CharacterBody2D
 		if other == null:
 			continue
 
+		var vb := other.velocity
+		var speed_b := vb.length()
+		if speed_b <= 0.01:
+			continue # stationary bodies do not push
+
+		var dir_b := vb / speed_b
+
 		total += PushSolver2D.compute_push_on_a(
 			bodyA.global_position,
-			bodyA.velocity.length(),
-			bodyA.velocity.normalized(),
+			speed_a,
+			dir_a,
 			other.global_position,
-			other.velocity.length(),
-			other.velocity.normalized(),
+			speed_b,
+			dir_b,
 			radius,
 			max_push,
+			falloff_exp,
 			side_bias,
-			falloff_exp
+			min_speed_factor
 		)
 
-	return total.limit_length(max_push)	
+	return total.limit_length(max_push)

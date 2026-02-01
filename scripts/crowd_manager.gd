@@ -36,14 +36,16 @@ func _physics_process(dt: float) -> void:
 	clear_grid()
 	
 	if player:
-		insert_agent(player, player.global_position)
+		insert_agent(player, player.global_position)		
 
 	# 1) Build grid
 	for child in get_children():
 		if child is CrowdAgent:
 			(child as CrowdAgent).register_in_grid()
 
+	(player as PlayerPushController).physics_step(dt)
 	# 2) Step agents
 	for child in get_children():
 		if child is CrowdAgent:
 			(child as CrowdAgent).physics_step(dt)
+			

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bhtx7d8nan6qt" path="res://scenes/collectible/collectible_sample.tscn" id="2_8c41q"]
 [ext_resource type="PackedScene" uid="uid://bxlyvl12pgcvr" path="res://scenes/obstacle/obstacle.tscn" id="3_olg7q"]
 [ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="4_t1rx8"]
-[ext_resource type="PackedScene" uid="uid://0dt8el4fbxxp" path="res://scenes/hud.tscn" id="5_8iemx"]
+[ext_resource type="PackedScene" uid="uid://0dt8el4fbxxp" path="res://scenes/screens/hud.tscn" id="5_8iemx"]
 [ext_resource type="Texture2D" uid="uid://sc52d2ue8ugc" path="res://sprites/mansion-reference.png" id="6_64w2a"]
 [ext_resource type="PackedScene" uid="uid://d17ncw2rb7hk3" path="res://scenes/spawner.tscn" id="7_fpun6"]
 [ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="8_wc255"]
@@ -74,8 +74,13 @@ size = Vector2(484.24823, 16.708065)
 
 [node name="Sam" type="Node2D" unique_id=2027881017]
 
-[node name="Player" parent="." unique_id=637585576 instance=ExtResource("1_b121j")]
+[node name="Player" parent="." unique_id=637585576 node_paths=PackedStringArray("mgr") instance=ExtResource("1_b121j")]
 position = Vector2(750, 433)
+mgr = NodePath("../CrowdManager")
+push_radius = 50.0
+max_push = 40000.0
+falloff_exp = 1.2
+side_bias = 0.2
 
 [node name="Collectible" parent="." unique_id=1076301399 instance=ExtResource("2_8c41q")]
 position = Vector2(468, 435)

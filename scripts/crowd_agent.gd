@@ -22,7 +22,6 @@ class_name CrowdAgent
 @export var switch_hysteresis: float = 0.15  # 0..1: higher = less switching
 
 @export var push_radius: float = 400.0
-@export var max_side_push: float = 100180.0
 @export var push_forward_ratio: float = 0.20
 @export var push_falloff_exp: float = 1.2
 @export var max_total_push: float = 26000.0
