@@ -7,31 +7,94 @@
 [ext_resource type="PackedScene" uid="uid://fgnq6frat0i3" path="res://scenes/seeker.tscn" id="4_dinhu"]
 [ext_resource type="PackedScene" uid="uid://0dt8el4fbxxp" path="res://scenes/screens/hud.tscn" id="5_kvuet"]
 [ext_resource type="Texture2D" uid="uid://sc52d2ue8ugc" path="res://sprites/mansion-reference.png" id="6_trtic"]
-[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="7_ir15t"]
+[ext_resource type="PackedScene" uid="uid://d17ncw2rb7hk3" path="res://scenes/spawner.tscn" id="7_ir15t"]
 [ext_resource type="PackedScene" uid="uid://d25fgre156d1g" path="res://scenes/crowd_manager.tscn" id="8_ca42v"]
-[ext_resource type="PackedScene" uid="uid://07e6jj7kwoxb" path="res://scenes/exit.tscn" id="9_rysoc"]
+[ext_resource type="PackedScene" path="res://scenes/exit.tscn" id="9_rysoc"]
 [ext_resource type="Texture2D" uid="uid://dlxvluvdcxs25" path="res://sprites/mansion/walls-bottom-left.png" id="11_37s47"]
-[ext_resource type="PackedScene" uid="uid://ci0a06vd7pff7" path="res://scenes/obstacle/table.tscn" id="11_dinhu"]
+[ext_resource type="PackedScene" path="res://scenes/obstacle/table.tscn" id="11_dinhu"]
 [ext_resource type="Texture2D" uid="uid://cv583ukfkbnf" path="res://sprites/mansion/walls-bottom-right.png" id="12_bt5mj"]
-[ext_resource type="PackedScene" uid="uid://dmi7vfjhw28w8" path="res://scenes/obstacle/bed.tscn" id="12_kvuet"]
-[ext_resource type="PackedScene" uid="uid://658hujeue6ur" path="res://scenes/obstacle/safe_closed.tscn" id="12_trtic"]
+[ext_resource type="PackedScene" path="res://scenes/obstacle/bed.tscn" id="12_kvuet"]
+[ext_resource type="PackedScene" path="res://scenes/obstacle/safe_closed.tscn" id="12_trtic"]
 [ext_resource type="Texture2D" uid="uid://b4e4pjug8e5xy" path="res://sprites/mansion/walls-center-bottom.png" id="13_e1j6l"]
-[ext_resource type="PackedScene" uid="uid://ckvarrp6qvged" path="res://scenes/obstacle/safe_open.tscn" id="13_trtic"]
-[ext_resource type="PackedScene" uid="uid://brdh0dh5m6xo2" path="res://scenes/collectible/bar_stack.tscn" id="14_ir15t"]
+[ext_resource type="PackedScene" path="res://scenes/obstacle/safe_open.tscn" id="13_trtic"]
+[ext_resource type="PackedScene" path="res://scenes/collectible/bar_stack.tscn" id="14_ir15t"]
 [ext_resource type="Texture2D" uid="uid://155yqqeva7bn" path="res://sprites/mansion/walls-center-left.png" id="14_pl11u"]
-[ext_resource type="PackedScene" uid="uid://dl2m1ddwihnuc" path="res://scenes/obstacle/desk.tscn" id="14_rysoc"]
+[ext_resource type="PackedScene" path="res://scenes/obstacle/desk.tscn" id="14_rysoc"]
 [ext_resource type="Texture2D" uid="uid://brxlhu270hs6r" path="res://sprites/mansion/walls-center-right.png" id="15_bhx41"]
 [ext_resource type="Texture2D" uid="uid://df6ikhubxhr7q" path="res://sprites/mansion/walls-center-top-left.png" id="16_qnb83"]
-[ext_resource type="PackedScene" uid="uid://b3yv3honna0ib" path="res://scenes/collectible/money_pile.tscn" id="16_ssvqc"]
+[ext_resource type="PackedScene" path="res://scenes/collectible/money_pile.tscn" id="16_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://cm80xsfsa11sb" path="res://sprites/mansion/walls-center-top-right.png" id="17_sww3w"]
 [ext_resource type="Texture2D" uid="uid://my7eld3mlsuq" path="res://sprites/mansion/walls-center-top.png" id="18_suyxu"]
 [ext_resource type="Texture2D" uid="uid://bqmef2dqb5t3g" path="res://sprites/mansion/walls-outline.png" id="20_qouja"]
 [ext_resource type="Texture2D" uid="uid://coxo7eu6m0ii4" path="res://sprites/mansion/walls-top-left.png" id="21_wljb1"]
 [ext_resource type="Texture2D" uid="uid://bkupqkfnit3e1" path="res://sprites/mansion/walls-top-right.png" id="22_v2yb1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_37s47"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sww3w"]
 resource_local_to_scene = true
 size = Vector2(292, 222.31949)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suyxu"]
+size = Vector2(736.22064, 15.023473)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgl2t"]
+size = Vector2(681.2066, 14.697885)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qouja"]
+size = Vector2(332.3728, 16.707848)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wljb1"]
+size = Vector2(503.7451, 16.707848)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2yb1"]
+size = Vector2(204.34001, 16.707848)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_js0lu"]
+size = Vector2(54.282608, 16.707848)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gxtfn"]
+height = 27.230225
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twgab"]
+size = Vector2(114.81205, 16.707848)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02fa5"]
+size = Vector2(114.81205, 16.707848)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nepv3"]
+size = Vector2(61.666584, 16.707848)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7025r"]
+size = Vector2(61.666584, 16.707848)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4url"]
+size = Vector2(598.6361, 14.697885)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ool0"]
+size = Vector2(393.4525, 15.875553)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pr1ej"]
+size = Vector2(202.89423, 15.875553)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05nbr"]
+size = Vector2(195.81305, 15.875553)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0sl42"]
+size = Vector2(588.5632, 14.697885)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oaba0"]
+size = Vector2(1898.5068, 14.697885)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_458eo"]
+size = Vector2(502.29858, 14.697885)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3rex"]
+size = Vector2(572.73755, 15.879459)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fedci"]
+size = Vector2(754.42395, 24.026545)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8qswn"]
+size = Vector2(484.24823, 16.708065)
 
 [node name="Game" type="Node2D" unique_id=172343982]
 z_as_relative = false
@@ -101,7 +164,7 @@ position = Vector2(2052, 132)
 [node name="CollisionShape2D" parent="Exit" index="0" unique_id=1702538791]
 position = Vector2(-14, 10.5)
 scale = Vector2(1, 1.003061)
-shape = SubResource("RectangleShape2D_37s47")
+shape = SubResource("RectangleShape2D_sww3w")
 
 [node name="BlackOverlay" type="Polygon2D" parent="." unique_id=902701172]
 visible = false
@@ -114,13 +177,13 @@ y_sort_enabled = true
 position = Vector2(2048, 1153)
 
 [node name="WallsBottomLeft" type="Sprite2D" parent="Mansion" unique_id=1305024853]
+z_index = -1
 z_as_relative = false
-y_sort_enabled = true
 texture = ExtResource("11_37s47")
 
 [node name="WallsBottomRight" type="Sprite2D" parent="Mansion" unique_id=270453190]
+z_index = -1
 z_as_relative = false
-y_sort_enabled = true
 texture = ExtResource("12_bt5mj")
 
 [node name="WallsCenterBottom" type="Sprite2D" parent="Mansion" unique_id=1702887140]
@@ -150,8 +213,8 @@ texture = ExtResource("17_sww3w")
 offset = Vector2(-912.065, 580.535)
 
 [node name="WallsCenterTop" type="Sprite2D" parent="Mansion" unique_id=1071103798]
+z_index = -1
 z_as_relative = false
-y_sort_enabled = true
 texture = ExtResource("18_suyxu")
 
 [node name="WallsOutline" type="Sprite2D" parent="Mansion" unique_id=1273451771]
@@ -160,13 +223,13 @@ z_as_relative = false
 texture = ExtResource("20_qouja")
 
 [node name="WallsTopLeft" type="Sprite2D" parent="Mansion" unique_id=1860088818]
+z_index = -1
 z_as_relative = false
-y_sort_enabled = true
 texture = ExtResource("21_wljb1")
 
 [node name="WallsTopRight" type="Sprite2D" parent="Mansion" unique_id=1482559831]
+z_index = -1
 z_as_relative = false
-y_sort_enabled = true
 texture = ExtResource("22_v2yb1")
 
 [node name="WallsCenterLeft" type="Sprite2D" parent="Mansion" unique_id=1900736254]
@@ -175,6 +238,143 @@ y_sort_enabled = true
 position = Vector2(-936.75, 877.82)
 texture = ExtResource("14_pl11u")
 offset = Vector2(936.75, -877.82)
+
+[node name="WallCollider" type="StaticBody2D" parent="Mansion" unique_id=1010311967]
+position = Vector2(-2048, -1153)
+scale = Vector2(2.13, 2.13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=631855309]
+position = Vector2(427.6995, 82.15962)
+shape = SubResource("RectangleShape2D_suyxu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=2121217132]
+position = Vector2(82.172295, 414.7992)
+rotation = 1.5731338
+shape = SubResource("RectangleShape2D_sgl2t")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=2128890921]
+position = Vector2(36.62039, 892.5042)
+rotation = 1.5731338
+shape = SubResource("RectangleShape2D_qouja")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=1318454365]
+position = Vector2(287.56403, 757.74646)
+rotation = -3.1415925
+shape = SubResource("RectangleShape2D_wljb1")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=2054134200]
+position = Vector2(518.3098, 853.34375)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_v2yb1")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=675894860]
+position = Vector2(517.37085, 1072.2117)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_js0lu")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=918479542]
+position = Vector2(1405.6338, 1070.892)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_js0lu")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=1843320409]
+position = Vector2(1036.1503, 439.90607)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_gxtfn")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=503901671]
+position = Vector2(1036.6196, 560.0939)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_gxtfn")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=1159144549]
+position = Vector2(885.9154, 560.56335)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_gxtfn")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=1433509872]
+position = Vector2(886.85443, 439.90607)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_gxtfn")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=1607673346]
+position = Vector2(885.91547, 319.71826)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_gxtfn")
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=1573794312]
+position = Vector2(1035.6807, 320.18777)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_gxtfn")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=1476721536]
+position = Vector2(823.0047, 104.69484)
+rotation = -2.345857
+shape = SubResource("RectangleShape2D_twgab")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=511143764]
+position = Vector2(1100.9387, 103.755844)
+rotation = -0.78819937
+shape = SubResource("RectangleShape2D_02fa5")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=620751536]
+position = Vector2(886.197, 140.9692)
+rotation = 0.004670322
+shape = SubResource("RectangleShape2D_nepv3")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=2096859744]
+position = Vector2(1038.4976, 141.78401)
+rotation = 0.004670322
+shape = SubResource("RectangleShape2D_7025r")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=1463190524]
+position = Vector2(1871.877, 764.06366)
+rotation = 1.5731338
+shape = SubResource("RectangleShape2D_m4url")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=782316946]
+position = Vector2(1840.3417, 266.22787)
+rotation = 1.5731338
+shape = SubResource("RectangleShape2D_8ool0")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=1887803966]
+position = Vector2(1390.8569, 167.10983)
+rotation = 1.5731338
+shape = SubResource("RectangleShape2D_pr1ej")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=708924465]
+position = Vector2(533.325, 172.08516)
+rotation = 1.5731338
+shape = SubResource("RectangleShape2D_05nbr")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=291728012]
+position = Vector2(1390.1223, 641.8524)
+rotation = 1.5731338
+shape = SubResource("RectangleShape2D_0sl42")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=42636104]
+position = Vector2(961.46, 1058.6854)
+shape = SubResource("RectangleShape2D_oaba0")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=1505323511]
+position = Vector2(1405.073, 703.72424)
+rotation = 1.5731338
+shape = SubResource("RectangleShape2D_458eo")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=781669702]
+position = Vector2(532.4334, 646.47284)
+rotation = 1.5683053
+shape = SubResource("RectangleShape2D_h3rex")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=805980395]
+position = Vector2(1501.6462, 77.26238)
+rotation = -3.1403239
+shape = SubResource("RectangleShape2D_fedci")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Mansion/WallCollider" unique_id=1094565877]
+position = Vector2(1637.5585, 456.8075)
+rotation = -3.1403239
+shape = SubResource("RectangleShape2D_8qswn")
 
 [node name="Obstacle2" parent="." unique_id=436183618 instance=ExtResource("11_dinhu")]
 position = Vector2(640, 1203)
