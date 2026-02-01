@@ -36,7 +36,7 @@ func switch_to_menu():
 	
 func switch_to_round_over(condition: Round_end_condition):
 	GameEvents.round_over.emit(condition)
-	if condition == Round_end_condition.THIEF_FLED:
+	if condition == Round_end_condition.THIEF_FLED or condition == Round_end_condition.SEEKER_NO_LIVES:
 		if is_first_player_turn:
 			player_score_0 += round_score
 		else:
